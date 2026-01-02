@@ -1,82 +1,140 @@
 # Claude Progress - OM Financial Website
 
 Last Updated: 2026-01-01
-Session: 5
+Session: 6
 
 ## Current Status
 
-Phase 4: Remaining Core Pages - COMPLETE
+Phase 5: About Section + Advisor Portal - COMPLETE
 
 ## Completed This Session
 
-### Session 5: Phase 4 Core Pages
+### Session 6: Phase 5 - About Section + Advisor Portal Pages
 
-#### Acquisitions & Succession Planning Page
-- [x] /acquisitions - Full page with:
-  - Hero section with dual CTAs
-  - Value proposition stats (50+ years, 30+ partners, etc.)
-  - Two-audience split (AGAs/MGAs vs Independent Advisors)
-  - Succession options cards (Immediate Sale, Gradual Transition, Partner Buyout, Mentorship)
-  - Ready to Explore section with contact info
-  - Final CTA section
+#### About Section Pages (2 pages)
 
-#### Seminars Page (Strapi-ready)
-- [x] /seminars - Full page with:
-  - Strapi-ready Seminar interface
-  - Upcoming seminars grid (5 sample seminars)
-  - Seminar topic categories (10 topics)
-  - Training partners section
-  - Office locations for in-person training
-  - Stats section (100+ sessions/year, 6 provinces, 50+ years)
+##### News Page (/about/news)
+- [x] Strapi-ready NewsArticle interface
+- [x] Featured article hero card
+- [x] News grid with 5 sample articles
+- [x] Category badges (announcement, industry, event, company)
+- [x] Browse by Category section
+- [x] Stay Updated CTA
 
-#### Advisor Benefits Page
-- [x] /advisor-benefits - Full page with:
-  - Benefits grid (6 benefits, E&O highlighted)
-  - E&O Insurance detail section with feature list
-  - "Know Your Risk" info card
-  - Support services grid (4 services)
-  - Stats section
-  - Office contact cards
-  - Join CTA
+##### Event Gallery Page (/about/gallery)
+- [x] Photo grid with 12 placeholder images
+- [x] Category filter tabs (All, Conferences, Training, Social, Awards)
+- [x] Lightbox Dialog for full-size viewing
+- [x] Navigation arrows in lightbox
+- [x] Stats section (50+ conferences, 200+ training sessions)
+- [x] Join Our Next Event CTA
 
-#### Find an Advisor Page
-- [x] /products/find-advisor - Full page with:
-  - GHL form placeholder (ready for widget embed)
-  - "How It Works" numbered steps
-  - Product types tag cloud (12 products)
-  - Office location cards with Get Directions
-  - Trust indicators bar
-  - Call/Browse CTA
+#### Advisor Portal Pages (10 pages)
 
-#### Partners Detail Page
-- [x] /products/partners - Full page with:
-  - 30+ partners data array by tier
-  - Product categories grid (Life, Health, Wealth, Specialty)
-  - Marquee partner carousel
-  - Premier Partners section (6 partners)
-  - Major Partners section (11 partners)
-  - Additional Partners grid (14 partners)
-  - Network benefits section
-  - Join/Find Advisor CTA
+##### Portal Hub (/advisor-portal)
+- [x] Hero with Virtgate quick access
+- [x] Virtgate card with real URL (https://mgacanada.virtgate.ca/)
+- [x] 9 portal section cards with colored icons
+- [x] Network stats section (1,500+ advisors, 30+ carriers, 50+ years)
+- [x] Office contact cards with phone/email
+- [x] Launch Virtgate CTA
+
+##### Event Calendar (/advisor-portal/calendar)
+- [x] Strapi-ready CalendarEvent interface
+- [x] 8 sample events with date badges
+- [x] Event type indicators (webinar, in-person, hybrid)
+- [x] Category legend (training, carrier, compliance, networking)
+- [x] Add to Calendar button pattern
+
+##### Training Library (/advisor-portal/training)
+- [x] TrainingResource interface
+- [x] 10 sample training resources
+- [x] Resource type badges (video, document, webinar, course)
+- [x] Category filter pattern
+- [x] Provider attribution
+
+##### Industry Blogs (/advisor-portal/blogs)
+- [x] Strapi-ready BlogPost interface
+- [x] Featured post large card
+- [x] Blog grid with 5 sample posts
+- [x] 5 category types (industry, sales-tips, product, compliance, technology)
+- [x] Author and read time metadata
+- [x] Browse by Category grid
+
+##### Toolbox (/advisor-portal/toolbox)
+- [x] 6 tool categories (Marketing, Sales, Forms, Templates, Email, Social)
+- [x] Real illustration software data from advisor-portal.json (8 entries)
+- [x] Real rates & quotes tools (WINQUOTE, GIC rates)
+- [x] Download/external link buttons
+- [x] Stats section (120+ resources)
+
+##### Community Forum (/advisor-portal/forum)
+- [x] Coming Soon placeholder with Q2 2026 launch date
+- [x] What to Expect preview (Discussion Forums, Peer Networking, Expert Q&A)
+- [x] Notify Me button
+- [x] Alternative contact options (office cards)
+- [x] Join Our Network CTA
+
+##### Compliance (/advisor-portal/compliance)
+- [x] 6 compliance categories (KYC, AML, Privacy, Licensing, E&O, Regulations)
+- [x] Important alerts banner with priority badges (Urgent/Notice)
+- [x] 3 sample compliance alerts
+- [x] Quick Downloads section (6 resources)
+- [x] Contact Compliance Team card
+
+##### OM University (/advisor-portal/university)
+- [x] 3 learning paths (Beginner, Intermediate, Advanced)
+- [x] Course interface with CE credits
+- [x] 6 sample courses
+- [x] 4 certifications (Certified Life Specialist, Investment Expert, etc.)
+- [x] Stats section (50+ courses, 100+ CE credits, 800+ enrolled)
+
+##### Calculators (/advisor-portal/calculators)
+- [x] 5 calculator categories with real data from advisor-portal.json
+- [x] 18 calculators total (Financial Needs, Retirement, Investing, Tax, Mortgage)
+- [x] Real external links to BMO, Manulife, Mackenzie, CRA, etc.
+- [x] Important disclaimer section
+- [x] Stats section
+
+##### Incentives & Contests (/advisor-portal/incentives)
+- [x] Strapi-ready Incentive interface
+- [x] 3 active programs (Q1 Challenge, New Advisor Bonus, Manulife Promo)
+- [x] 1 upcoming program (Spring Sales Sprint)
+- [x] 4 recognition programs (President's Club, Rising Star, Consistency, Team Builder)
+- [x] Qualification criteria lists
+- [x] Stats section ($50K+ rewards, 200+ participants)
 
 #### All Pages Tested with Playwright MCP
-- [x] /acquisitions - PASSED
-- [x] /seminars - PASSED
-- [x] /advisor-benefits - PASSED
-- [x] /products/find-advisor - PASSED
-- [x] /products/partners - PASSED (fixed routing issue from directory to flat file)
+- [x] /about/news - PASSED
+- [x] /about/gallery - PASSED
+- [x] /advisor-portal - PASSED
+- [x] /advisor-portal/calendar - PASSED
+- [x] /advisor-portal/training - PASSED
+- [x] /advisor-portal/blogs - PASSED
+- [x] /advisor-portal/toolbox - PASSED
+- [x] /advisor-portal/forum - PASSED
+- [x] /advisor-portal/compliance - PASSED
+- [x] /advisor-portal/university - PASSED
+- [x] /advisor-portal/calculators - PASSED
+- [x] /advisor-portal/incentives - PASSED
 
 ## In Progress
 
-None - waiting for user direction
+None - Phase 5 complete
 
 ## Next Up
 
-Feature ID: F306 - News page
-Feature ID: F308 - Event Gallery page
-Feature ID: F7XX - Advisor Portal pages (10+ pages)
-Feature ID: SXXX - SEO features (robots.txt, sitemap, structured data)
+Feature ID: SXXX - SEO features
+- robots.txt with AI bot rules
+- Auto-generated sitemap.xml
+- Structured data (Organization, LocalBusiness)
+- Meta tags optimization
+- llms.txt manifest
+
 Feature ID: TXXX - Testing suite
+- Vitest unit tests
+- Playwright E2E tests
+- Accessibility audits
 
 ## Blockers
 
@@ -86,10 +144,11 @@ Waiting for:
 - GHL chatbot widget embed code
 - Google Maps API key for embedded maps
 - Additional team member information
+- Real blog/news content for CMS integration
 
 ## Notes
 
-### Pages Completed (17 total)
+### Pages Completed (29 total)
 1. Homepage (/)
 2. About Hub (/about)
 3. Vision & Mission (/about/vision-mission)
@@ -97,32 +156,65 @@ Waiting for:
 5. History & Strategy (/about/history)
 6. Executive Team (/about/executive-team)
 7. Disclaimer (/about/disclaimer)
-8. Contact (/contact)
-9. Products & Partners (/products)
-10. Find an Advisor (/products/find-advisor)
-11. Partners Detail (/products/partners)
-12. Acquisitions (/acquisitions)
-13. Seminars (/seminars)
-14. Advisor Benefits (/advisor-benefits)
-+ Route stubs for remaining pages
+8. News (/about/news) - NEW
+9. Event Gallery (/about/gallery) - NEW
+10. Contact (/contact)
+11. Products & Partners (/products)
+12. Find an Advisor (/products/find-advisor)
+13. Partners Detail (/products/partners)
+14. Acquisitions (/acquisitions)
+15. Seminars (/seminars)
+16. Advisor Benefits (/advisor-benefits)
+17. Advisor Portal Hub (/advisor-portal) - NEW
+18. Event Calendar (/advisor-portal/calendar) - NEW
+19. Training Library (/advisor-portal/training) - NEW
+20. Industry Blogs (/advisor-portal/blogs) - NEW
+21. Toolbox (/advisor-portal/toolbox) - NEW
+22. Community Forum (/advisor-portal/forum) - NEW
+23. Compliance (/advisor-portal/compliance) - NEW
+24. OM University (/advisor-portal/university) - NEW
+25. Calculators (/advisor-portal/calculators) - NEW
+26. Incentives & Contests (/advisor-portal/incentives) - NEW
 
-### Routing Note
-- Partners page uses flat file routing (/products/partners.tsx)
-- Avoids directory-based routing complexity with TanStack Router
+### Strapi-Ready Interfaces Created
+- NewsArticle (news page)
+- GalleryImage (gallery page)
+- CalendarEvent (calendar page)
+- TrainingResource (training page)
+- BlogPost (blogs page)
+- Course (university page)
+- Incentive (incentives page)
+
+### Real Data Used
+- Virtgate URL: https://mgacanada.virtgate.ca/
+- Calculator links from docs/advisor-portal.json
+- Illustration software with versions from docs/advisor-portal.json
+- Rates & quotes tools (WINQUOTE, CANNEX GIC)
 
 ### Console Warnings (Non-blocking)
 - Nested anchor tag warning (in header/footer buttons)
 - ScrollRestoration deprecation warning
 - These don't affect functionality
 
-### Content Source
-- Scraped from existing omfinancial.com WordPress site
-- Executive team contacts extracted from contact page
-- Partner list extracted from products page
-
 ---
 
 ## Session History
+
+### Session 6 - 2026-01-01
+- Built News page with Strapi-ready interface
+- Built Event Gallery page with lightbox Dialog
+- Built Advisor Portal hub with 9 section cards
+- Built Event Calendar with sample events
+- Built Training Library with resource types
+- Built Industry Blogs with categories
+- Built Toolbox with real calculator/software data
+- Built Community Forum (Coming Soon placeholder)
+- Built Compliance with alerts and resources
+- Built OM University with courses and certifications
+- Built Calculators with 18 real external links
+- Built Incentives with programs and recognition
+- Tested all 12 new pages with Playwright MCP
+- Total pages: 29 (12 new this session)
 
 ### Session 5 - 2026-01-01
 - Built Acquisitions & Succession Planning page

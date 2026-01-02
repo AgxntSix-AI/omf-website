@@ -1,0 +1,192 @@
+{
+  "advisor_portal": {
+    "name": "Virtgate",
+    "url": "https://mgacanada.virtgate.ca/"
+  },
+  "toolbox": {
+    "calculator": {
+      "financial_needs_analysis": [
+        {
+          "name": "Critical Illness Calculator (BMO Insurance)",
+          "url": "http://www.bmo.com/tools/insurance/ci/en/"
+        },
+        {
+          "name": "Life Insurance Calculator (Manulife)",
+          "url": "http://www.insureright.ca/"
+        },
+        {
+          "name": "Life Insurance Needs Estimator (WinQuote)",
+          "url": "http://bulletin.lifeguide.com/gen_calcs/needs_analysis.html"
+        }
+      ],
+      "retirement_planning": [
+        {
+          "name": "Registered / Non-Registered Comparison (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/RegNonReg/rrsp_vs_non_rrsp.jsp"
+        },
+        {
+          "name": "Retirement Savings Calculator (CI Investments)",
+          "url": "http://www.ci.com/web/learningcentre/calculator.jsp?lang=ENG"
+        },
+        {
+          "name": "RIF / LIF Illustrator (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/RRIF_LIF_LRIF/RLL_Start.jsp"
+        },
+        {
+          "name": "RRSP Loan Planner (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/RRSPloan/RRSPloan_Start.jsp"
+        }
+      ],
+      "investing_and_saving": [
+        {
+          "name": "Advantage of Early Investing (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/EarlyInvesting/EarlyInvesting1.jsp"
+        },
+        {
+          "name": "Growth Calculator (Fidelity Investments)",
+          "url": "http://www.fidelity.ca/cs/Satellite/en/public/education_planning/calculators/growth"
+        },
+        {
+          "name": "Investment & Regular Deposit (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/InvRegDeposit/InvRegDeposit.jsp"
+        },
+        {
+          "name": "RESP Calculator (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/RESP/RespStart.jsp"
+        }
+      ],
+      "taxation": [
+        {
+          "name": "Child & Family Benefits Calculator (CRA)",
+          "url": "http://www.cra-arc.gc.ca/bnfts/clcltr/menu-eng.html"
+        },
+        {
+          "name": "Income Tax Refund Calculator (TurboTax)",
+          "url": "http://turbotax.intuit.ca/tax-resources/canada-income-tax-calculator.jsp"
+        },
+        {
+          "name": "Payroll Deductions Calculator (CRA)",
+          "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/startLanguage.do?lang=English"
+        },
+        {
+          "name": "Tax Calculator (Fidelity Investments)",
+          "url": "http://www.fidelity.ca/cs/Satellite/en/public/education_planning/calculators/tax"
+        }
+      ],
+      "mortgage_and_lending": [
+        {
+          "name": "Debt Consolidation Calculator (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/DebtConsolidator/DebtConsolidator.jsp"
+        },
+        {
+          "name": "Manulife One Calculator (Manulife Bank)",
+          "url": "http://www2.manulifeone.ca/blazeds/onecalc/onecalc.jsp"
+        },
+        {
+          "name": "Mortgage Qualifier (Mackenzie Investments)",
+          "url": "http://www.mackenziefinancial.com/calc/jsp/MortgageQualifier/MortgageQualifier.jsp"
+        }
+      ]
+    },
+    "rates_and_quotes": {
+      "winquote": {
+        "name": "WINQUOTE",
+        "url": "https://www.winquote.net/quote_life_ca.html"
+      },
+      "gic_rates": [
+        {
+          "name": "GIC / Rates (1–6 YEARS)",
+          "url": "https://www.cannex.com/public/term04e.html"
+        },
+        {
+          "name": "GIC / Rates (30–270 DAYS)",
+          "url": "https://www.cannex.com/public/term03e.html"
+        }
+      ]
+    },
+    "illustration_software": [
+      {
+        "name": "Manulife Financial",
+        "version": "15.13.4",
+        "url": null,
+        "notes": "You must log into Repsource to download this"
+      },
+      {
+        "name": "iA Financial Group",
+        "version": "8.1.2",
+        "url": "https://iaa.secureweb.inalco.com/portal/ind/server.pt/community/ind_-_comunity/330"
+      },
+      {
+        "name": "BMO Insurance",
+        "version": "33.0",
+        "url": "http://advisorsupport.bmoinsurance.com/wave/ewavedownload.html"
+      },
+      {
+        "name": "Foresters Financial",
+        "version": "2.0.166",
+        "url": "https://sky.foresters.com/skyinstall/skyinstallation.exe"
+      },
+      {
+        "name": "Equitable Life",
+        "version": "2017-1",
+        "url": "http://www.equitable.ca/webupdates/esi/esi.exe"
+      },
+      {
+        "name": "UV Insurance",
+        "version": "2.3.1",
+        "url": "https://uvinsurance.ca/"
+      },
+      {
+        "name": "La Capitale",
+        "version": "8.3.0",
+        "url": "http://www.lacapitale.com/en/brokers",
+        "activation_key": "956422"
+      },
+      {
+        "name": "Humania Assurance",
+        "version": "2016.2",
+        "url": "https://www.humania.ca/en-CA/doc/download-our-new-software"
+      },
+      {
+        "name": "Blue Cross Canada",
+        "version": "1.0.0",
+        "url": "https://www.info-partners.ca/b2b/download/Portail_V1.0.0.exe"
+      },
+      {
+        "name": "SLI",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      },
+      {
+        "name": "Edge Benefits",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      },
+      {
+        "name": "GMS",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      },
+      {
+        "name": "Alliance global",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      },
+      {
+        "name": "tugo",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      },
+      {
+        "name": "Travellance",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      },
+      {
+        "name": "21st century",
+        "version": null,
+        "url": "https://omfinancial.com/illustration-software/#"
+      }
+    ]
+  }
+}

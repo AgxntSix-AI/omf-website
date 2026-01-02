@@ -1,0 +1,266 @@
+```json
+{
+  "companies": [
+    {
+      "name": "Manulife",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://advisor.manulife.ca/landing" },
+        { "name": "Forms & Applications", "url": "https://repsourcepublic.manulife.com/wps/portal/Repsource/PublicHome/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3hPQ2cnYzdTEwN_bwtLA8_AYCf_wDATI_dQI6B8pFm8AQ7gaEBAt59Hfm6qfkFuRDkA9fW7RQ!!/dl3/d3/L2dJQSEvUUt3QS9ZQnZ3LzZfSTFDQjNGNTQwT0s4OTBJUVNCT1FWNDJHVTI!/?WCM_GLOBAL_CONTEXT=" },
+        { "name": "Manulife Rates", "url": "https://www.manulifebank.ca/current-rates.html" },
+        { "name": "Seg Funds Performance", "url": "https://funds.manulife.ca/en-US/profiles/?mode=desktop" },
+        { "name": "Illustration Software", "url": "https://repsourcepublic.manulife.com/wps/portal/Repsource/PublicHome/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3hPQ2cnYzdTEwN_bwtLA8_AYCf_wDATI_dQI6B8pFm8AQ7gaEBAt59Hfm6qfkFuRDkA9fW7RQ!!/dl3/d3/L2dJQSEvUUt3QS9ZQnZ3LzZfSTFDQjNGNTQwT0s4OTBJUVNCT1FWNDJHVTI!/?WCM_GLOBAL_CONTEXT=" }
+      ]
+    },
+    {
+      "name": "IA Financial Group",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://iaa.secureweb.inalco.com/MKMWPN23/home" },
+        { "name": "Forms & Applications", "url": "https://iaa.secureweb.inalco.com/cw/document-centre/#sort=relevancy&f:@doclanguagereference=[English]" },
+        { "name": "Rates", "url": "https://ia.ca/fixed-income-investment-rate" },
+        { "name": "Seg Funds Performance", "url": "https://ia.ca/funds-performance" },
+        { "name": "Illustration Software (EVO Insurance)", "url": "https://iaa.secureweb.inalco.com/MKMWPN23/home" }
+      ]
+    },
+    {
+      "name": "Sun Life",
+      "links": [
+        { "name": "Sun Life Group Benefits — Public Site | Advisor Site", "url": "https://www.sunnet.sunlife.com/pa/e/signin/index.aspx" },
+        { "name": "Sun Life Group Retirement Services — Public Site | Advisor Site", "url": "https://www.sunnet.sunlife.com/pa/e/signin/index.aspx" }
+      ]
+    },
+    {
+      "name": "Canada Life",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://repnet1.canadalife.com/apps/iiipRepNetLoginSelfCareWar/LoginPage.do" },
+        { "name": "Forms & Applications", "url": "https://www.canadalife.com/support/forms.html" },
+        { "name": "Seg Funds Performance", "url": "https://canadalife.fundata.com/Default.aspx?language=en" }
+      ]
+    },
+    {
+      "name": "Canada Protection Plan",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.cpp.ca/advisors/" },
+        { "name": "Forms & Applications", "url": "https://www.cpp.ca/advisors/advisor-support-reference-material-forms/#reference-material-forms" },
+        { "name": "CPP Illustrator", "url": "https://go.eaccess.ca/#illustration/new" }
+      ]
+    },
+    {
+      "name": "Foresters Financial",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://bluesky.foresters.com/WebGui/login.aspx?PublicLanding=true" },
+        { "name": "Illustration Software", "url": "https://sky.foresters.com/skyinstall/skyinstallation.exe" }
+      ]
+    },
+    {
+      "name": "Empire Life",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.empire.ca/advisor" },
+        { "name": "Forms & Applications", "url": "https://www.empire.ca/advisor/forms/looking-for-a-form" },
+        { "name": "Rates", "url": "https://www.empire.ca/investments/our-products/gio" },
+        { "name": "Seg Funds Performance", "url": "https://www.empire.ca/advisor/investments/our-funds/prices-performance" },
+        { "name": "Illustration Software", "url": "https://www.empire.ca/advisor/advanced-release-envision" }
+      ]
+    },
+    {
+      "name": "Desjardins",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.webi.desjardinslifeinsurance.com/en/public/Pages/default.aspx" },
+        { "name": "Rates", "url": "https://www.desjardins.com/ca/rates-returns/savings-investment/term-savings/index.jsp" },
+        { "name": "Seg Funds Performance", "url": "https://www.desjardinslifeinsurance.com/en/individual-savings/unit-prices-performance" },
+        { "name": "Online Illustration", "url": "https://dsignillustration.desjardins.com/en/Accueil" }
+      ]
+    },
+    {
+      "name": "Beneva",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.beneva.ca/en/iifs-brokers" },
+        { "name": "Forms & Applications", "url": "https://www.beneva.ca/en/iifs-brokers/document-centre" },
+        { "name": "Rates", "url": "https://www.beneva.ca/en/iifs-brokers/rates-returns" },
+        { "name": "Illustration Software", "url": "https://www.beneva.ca/en/iifs-brokers/online-tools-services/illustration-software" }
+      ]
+    },
+    {
+      "name": "Equitable Life of Canada",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://advisor.equitable.ca/advisor/en" },
+        { "name": "Forms & Applications (Insurance)", "url": "https://advisor.equitable.ca/advisor/en/individual-insurance/forms" },
+        { "name": "Forms & Applications (Investments)", "url": "https://advisor.equitable.ca/advisor/en/savings-retirement/s-r-forms" },
+        { "name": "Rates", "url": "https://www.equitablebank.ca/investment-rates" },
+        { "name": "Seg Funds Performance", "url": "https://equitablelife.fundata.com/" },
+        { "name": "Illustration Software", "url": "https://advisor.equitable.ca/advisor/en/forms/sales-illustrations" }
+      ]
+    },
+    {
+      "name": "Ivari",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://securewebapp.ivari.ca/usermanagement/account/login/en" },
+        { "name": "Forms & Applications", "url": "https://ivari.ca/resources/faq/forms-and-guides/" },
+        { "name": "Rates", "url": "https://rates.ivari.ca/" },
+        { "name": "Seg Funds Performance", "url": "https://rates.ivari.ca/EN/rates/default.asp?Lang=EN&ShowList=IP" }
+      ]
+    },
+    {
+      "name": "Assumption Life",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.assumption.ca/en/Home" },
+        { "name": "Applications & Forms", "url": "https://www.assumption.ca/en/advisor-corner/individual-investments/documents-and-forms" },
+        { "name": "Rates", "url": "https://www.assumption.ca/en/individuals/investments-retirement/tools/interest-rates-8efb9c80bb147c38f0e6384fdcf7099d" },
+        { "name": "Seg Funds Performance", "url": "https://assumption.lipperweb.com/assumplife/list?lang=en#FundDetail" },
+        { "name": "Illustration Web-Based", "url": "https://liaweb.assumption.ca/policies/63e8af94-34b9-4072-b1c0-c1382b3a599d" }
+      ]
+    },
+    {
+      "name": "BMO Insurance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://advisorsupport.bmoinsurance.com/advisor/en/Account/Login?ReturnUrl=true" },
+        { "name": "Forms & Performance", "url": "https://www.bmo.com/insurance/advisor/forms-and-materials/#section=life-and-critical-illness" },
+        { "name": "Rates", "url": "https://www.bmo.com/main/personal/investments/gic/gic-rates/" },
+        { "name": "Seg Funds Performance", "url": "https://www.bmo.com/insurance/retirement/guaranteed-investment-funds#--tabs-1719250423727-" },
+        { "name": "Illustration Software", "url": "https://advisorsupport.bmoinsurance.com/advisor/en/Account/WaveIllustration" }
+      ]
+    },
+    {
+      "name": "Serenia Life Financial",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://springboard.serenialife.ca/" },
+        { "name": "Rates", "url": "https://www.serenialife.ca/investments/rates/" },
+        { "name": "Illustration Software", "url": "https://springboard.serenialife.ca/supporting-my-business/#new-business-illustration" }
+      ]
+    },
+    {
+      "name": "UV Insurance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://uvinsurance.ca/services/resources-for-advisors/" },
+        { "name": "Applications & Forms", "url": "https://uvinsurance.ca/services/individual-insurance/forms/" },
+        { "name": "Rates", "url": "https://uvinsurance.ca/current-rates/" },
+        { "name": "Illustration Software", "url": "https://eapp.uvassurance.ca/" }
+      ]
+    },
+    {
+      "name": "Co-operators",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://benefitsnowlogon.cooperators.ca/login/bnalogin" }
+      ]
+    },
+    {
+      "name": "Humania Assurance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://extranet.humania.ca/home" },
+        { "name": "Illustration Online", "url": "https://illustration.humania.ca/en-CA" }
+      ]
+    },
+    {
+      "name": "Blue Cross",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.bluecross.ca/" }
+      ]
+    },
+    {
+      "name": "SLI Speciality Life Insurance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://slinsurance.ca/" }
+      ]
+    },
+    {
+      "name": "The Edge Benefits",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.edgebenefits.com/login" },
+        { "name": "Online Illustration", "url": "https://www.edgebenefits.com/EQA/#n1" }
+      ]
+    },
+    {
+      "name": "GMS",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://id.gms.ca/account/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dwebformsclient%26redirect_uri%3Dhttps%253A%252F%252Fonline.gms.ca%252Fcims%252Flogin-oidc.aspx%26response_mode%3Dform_post%26response_type%3Did" }
+      ]
+    },
+    {
+      "name": "Allianz Global Assistance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://advisormax.ca/login" }
+      ]
+    },
+    {
+      "name": "TuGo",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.tugo.com/en/partners/licensed-insurance-brokers/" }
+      ]
+    },
+    {
+      "name": "Travelance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.getreliable.com/getreliable/" }
+      ]
+    },
+    {
+      "name": "21st Century Insurance",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.21stcenturytips.com/Account/Login.aspx?ReturnUrl=%2fdefault.aspx%3ffromLandingPage%3dtrue&fromLandingPage=true" }
+      ]
+    },
+    {
+      "name": "Destination Travel Group",
+      "links": [
+        { "name": "Public Site | Advisor Site", "url": "https://www.desttravel.com/#/user" }
+      ]
+    },
+    {
+      "name": "myHSA",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://www.getmyhsa.com/advisor-overview" }
+      ]
+    },
+    {
+      "name": "GreenShield",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://healthassist.greenshield.ca/" }
+      ]
+    },
+    {
+      "name": "Secure Travel",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://dashboard.rimiinsurance.com/login" }
+      ]
+    },
+    {
+      "name": "Orange Benefit Fund",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://orangebenefitfund.ca/agents/" },
+        { "name": "Online Illustration", "url": "https://orangebenefitfund.ca/quote/" }
+      ]
+    },
+    {
+      "name": "INGLE Assurance Inc",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://www2.ingleassurance.com/cgi-bin/portal/portal.pl" }
+      ]
+    },
+    {
+      "name": "Wawanesa Insurance",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://www.wawanesalife.com/life-brokers/login" },
+        { "name": "Forms & Applications", "url": "https://www.wawanesalife.com/individual-life-insurance/individual-forms.html" },
+        { "name": "Rates", "url": "https://www.wawanesalife.com/investing-for-individuals/current-rates-and-values.html" }
+      ]
+    },
+    {
+      "name": "Travel Shield Canada Insurance Plan",
+      "links": [
+        { "name": "Public Site / Advisor Site", "url": "https://www.travelshield.ca/private-broker/index.php" }
+      ]
+    },
+    {
+      "name": "TD",
+      "links": []
+    },
+    {
+      "name": "B2B Bank",
+      "links": []
+    },
+    {
+      "name": "Equitable Bank",
+      "links": []
+    }
+  ]
+}
+```

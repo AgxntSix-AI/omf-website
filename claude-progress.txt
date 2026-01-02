@@ -61,15 +61,28 @@ public/
 
 ## In Progress
 
-- [ ] Add more shadcn/ui components (sheet, dialog, form, etc.)
-- [ ] Push to GitHub
+- [x] Add more shadcn/ui components (sheet, dialog, form, etc.) - DONE
+- [x] Push to GitHub - DONE (https://github.com/AgxntSix-AI/omf-website)
+- [x] Create site configuration files - DONE
+- [x] Install Magic UI (MCP server for Claude) - DONE
+
+## Recently Completed (Session 2)
+
+### Phase 1 continued:
+- [x] Added shadcn/ui components: dialog, sheet, form, input, textarea, select, scroll-area, separator, label, badge, dropdown-menu, navigation-menu, tooltip, avatar
+- [x] Installed Magic UI CLI and configured Claude MCP server
+- [x] Created src/config/site.ts (metadata, offices, social links)
+- [x] Created src/config/navigation.ts (menu structure)
+- [x] Created src/config/seo.ts (default meta tags, OG defaults)
+- [x] Created src/lib/structured-data.ts (schema.org JSON-LD generators)
+- [x] Updated CLAUDE.md with Magic UI info and correct color palette
 
 ## Next Up
 
-Feature ID: F005 - Site configuration files
-Feature ID: F101 - Asset folder structure (DONE)
-Feature ID: F102 - Site header placeholder (DONE - awaiting user)
-Feature ID: F103 - Site footer placeholder (DONE - awaiting user)
+Feature ID: F201 - Homepage route with meta tags
+Feature ID: F202 - Hero section (placeholder)
+Feature ID: F203 - About preview section
+Feature ID: F204 - Services grid
 
 ## Blockers
 

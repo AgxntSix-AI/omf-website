@@ -48,18 +48,33 @@ cat docs/features.json | grep -A2 '"status": "pending"' | head -20  # 4. Next pe
 - Runtime: Bun v1.2+
 - Framework: React 19 + Vite 6
 - Router: TanStack Router (file-based routing)
-- Styling: Tailwind CSS v4 + shadcn/ui
+- Styling: Tailwind CSS v4 + shadcn/ui + Magic UI
 - Language: TypeScript (strict)
 - Testing: Vitest + Playwright
 
-### Color Palette
+### Component Libraries
+
+- **shadcn/ui** - Base UI components (button, card, dialog, form, etc.)
+- **Magic UI** - Premium animated components for hero sections, carousels, etc.
+  - Install components: `bunx --bun @magicuidesign/cli@latest add <component>`
+  - Available via MCP server in Claude
+
+### Color Palette (from Canva Logo)
 
 ```css
---omf-blue: #183472;      /* Primary - Dark Blue */
---omf-pink: #f72b4f;      /* Accent - Hot Pink/Magenta */
---omf-gold: #ffcc00;      /* Highlight - Golden Yellow */
---omf-white: #ffffff;     /* Background */
+/* Primary Brand Colors */
+--primary: #7a3a40;       /* Lotus Burgundy - Primary */
+--accent: #b8944d;        /* Laser Gold - Accent */
+
+/* Backgrounds (warm off-white palette) */
+--background: #fdfcfb;    /* Warm off-white */
+--card: #faf9f7;          /* Slightly warmer for cards */
+--muted: #f5f3f0;         /* Muted backgrounds */
+
+/* Dark mode uses deep burgundy/charcoal tones */
 ```
+
+**Note:** Original Canva colors were Lotus #7b3e43, Laser #cda96a - refined for better contrast and premium feel. Bitter gray (#7b7c7a) NOT used per client preference.
 
 ---
 

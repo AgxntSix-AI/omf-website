@@ -183,9 +183,11 @@ function NewsPage() {
                           {featuredArticle.readTime} min read
                         </span>
                       </div>
-                      <Button variant="outline" size="sm" className="gap-2">
-                        Read More
-                        <ArrowRight className="h-4 w-4" />
+                      <Button asChild variant="outline" size="sm" className="gap-2">
+                        <Link to="/about/news/$slug" params={{ slug: featuredArticle.slug }}>
+                          Read More
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -213,37 +215,39 @@ function NewsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {regularArticles.map((article, index) => (
               <BlurFade key={article.id} delay={0.2 + index * 0.05} inView>
-                <Card className="h-full flex flex-col hover:shadow-lg hover:border-primary/20 transition-all group cursor-pointer">
-                  {/* Image Placeholder */}
-                  <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center rounded-t-lg">
-                    <Tag className="h-8 w-8 text-primary/30" />
-                  </div>
-                  <CardHeader className="pb-2">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${categoryInfo[article.category].color}`}>
-                        {categoryInfo[article.category].label}
-                      </span>
+                <Link to="/about/news/$slug" params={{ slug: article.slug }}>
+                  <Card className="h-full flex flex-col hover:shadow-lg hover:border-primary/20 transition-all group cursor-pointer">
+                    {/* Image Placeholder */}
+                    <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center rounded-t-lg">
+                      <Tag className="h-8 w-8 text-primary/30" />
                     </div>
-                    <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-colors">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col">
-                    <CardDescription className="line-clamp-3 flex-1 mb-4">
-                      {article.excerpt}
-                    </CardDescription>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        {formatDate(article.publishedAt)}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {article.readTime} min
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
+                    <CardHeader className="pb-2">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${categoryInfo[article.category].color}`}>
+                          {categoryInfo[article.category].label}
+                        </span>
+                      </div>
+                      <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-colors">
+                        {article.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-1 flex flex-col">
+                      <CardDescription className="line-clamp-3 flex-1 mb-4">
+                        {article.excerpt}
+                      </CardDescription>
+                      <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-3 w-3" />
+                          {formatDate(article.publishedAt)}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          {article.readTime} min
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               </BlurFade>
             ))}
           </div>

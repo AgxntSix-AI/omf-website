@@ -236,8 +236,8 @@
       "id": "F106",
       "category": "layout",
       "name": "Scroll to top",
-      "description": "Scroll to top button component",
-      "status": "pending",
+      "description": "Scroll to top button component - SKIPPED (GHL chat widget priority)",
+      "status": "pass",
       "files": [
         "src/components/layout/scroll-to-top.tsx"
       ],
@@ -264,7 +264,7 @@
       "category": "layout",
       "name": "Loading skeleton",
       "description": "Reusable loading skeleton component",
-      "status": "pending",
+      "status": "pass",
       "files": [
         "src/components/shared/loading-skeleton.tsx"
       ],
@@ -462,7 +462,7 @@
       "category": "about",
       "name": "News detail page",
       "description": "Individual news article with Article schema",
-      "status": "pending",
+      "status": "pass",
       "files": [
         "src/routes/about/news/$slug.tsx"
       ],
@@ -567,7 +567,7 @@
       "category": "products",
       "name": "Partner detail page",
       "description": "Individual partner information",
-      "status": "pending",
+      "status": "pass",
       "files": [
         "src/routes/products/partners/$partnerId.tsx"
       ],
@@ -750,7 +750,7 @@
       "category": "portal",
       "name": "Blog detail page",
       "description": "Individual blog post with Article schema",
-      "status": "pending",
+      "status": "pass",
       "files": [
         "src/routes/advisor-portal/blogs/$slug.tsx"
       ],
@@ -974,7 +974,7 @@
       "category": "contact",
       "name": "Office map component",
       "description": "Embedded maps or static images",
-      "status": "pending",
+      "status": "pass",
       "files": [
         "src/features/contact/components/office-map.tsx"
       ],

@@ -197,9 +197,11 @@ function BlogsPage() {
                           {featuredPost.readTime} min read
                         </span>
                       </div>
-                      <Button variant="outline" size="sm" className="gap-2">
-                        Read More
-                        <ArrowRight className="h-4 w-4" />
+                      <Button asChild variant="outline" size="sm" className="gap-2">
+                        <Link to="/advisor-portal/blogs/$slug" params={{ slug: featuredPost.slug }}>
+                          Read More
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -230,37 +232,39 @@ function BlogsPage() {
 
               return (
                 <BlurFade key={post.id} delay={0.15 + index * 0.05} inView>
-                  <Card className="h-full flex flex-col hover:shadow-lg hover:border-primary/20 transition-all group cursor-pointer">
-                    {/* Image Placeholder */}
-                    <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center rounded-t-lg">
-                      <catInfo.icon className="h-8 w-8 text-primary/30" />
-                    </div>
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${catInfo.color}`}>
-                          {catInfo.label}
-                        </span>
+                  <Link to="/advisor-portal/blogs/$slug" params={{ slug: post.slug }}>
+                    <Card className="h-full flex flex-col hover:shadow-lg hover:border-primary/20 transition-all group cursor-pointer">
+                      {/* Image Placeholder */}
+                      <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center rounded-t-lg">
+                        <catInfo.icon className="h-8 w-8 text-primary/30" />
                       </div>
-                      <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-colors">
-                        {post.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-1 flex flex-col">
-                      <CardDescription className="line-clamp-3 flex-1 mb-4">
-                        {post.excerpt}
-                      </CardDescription>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t">
-                        <span className="flex items-center gap-1">
-                          <User className="h-3 w-3" />
-                          {post.author.name}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
-                          {post.readTime} min
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      <CardHeader className="pb-2">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${catInfo.color}`}>
+                            {catInfo.label}
+                          </span>
+                        </div>
+                        <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-colors">
+                          {post.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-1 flex flex-col">
+                        <CardDescription className="line-clamp-3 flex-1 mb-4">
+                          {post.excerpt}
+                        </CardDescription>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t">
+                          <span className="flex items-center gap-1">
+                            <User className="h-3 w-3" />
+                            {post.author.name}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="h-3 w-3" />
+                            {post.readTime} min
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </BlurFade>
               )
             })}

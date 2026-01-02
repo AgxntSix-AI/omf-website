@@ -3,6 +3,8 @@ import { useEffect } from "react"
 import { MessageSquare, MapPin, Phone, Mail, Clock } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { BlurFade } from "@/components/magic-ui/blur-fade"
+import { OfficeMap } from "@/components/shared/office-map"
+import { siteConfig } from "@/config/site"
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -134,6 +136,33 @@ function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </BlurFade>
+
+          {/* Office Maps */}
+          <BlurFade delay={0.25} inView>
+            <div className="mb-12">
+              <h2 className="text-xl font-bold text-foreground text-center mb-6">
+                Find Our Offices
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <OfficeMap
+                  name={siteConfig.offices.toronto.name}
+                  address={siteConfig.offices.toronto.address}
+                  city={siteConfig.offices.toronto.city}
+                  province={siteConfig.offices.toronto.province}
+                  postalCode={siteConfig.offices.toronto.postalCode}
+                  coordinates={siteConfig.offices.toronto.coordinates}
+                />
+                <OfficeMap
+                  name={siteConfig.offices.mississauga.name}
+                  address={siteConfig.offices.mississauga.address}
+                  city={siteConfig.offices.mississauga.city}
+                  province={siteConfig.offices.mississauga.province}
+                  postalCode={siteConfig.offices.mississauga.postalCode}
+                  coordinates={siteConfig.offices.mississauga.coordinates}
+                />
+              </div>
             </div>
           </BlurFade>
 

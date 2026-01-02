@@ -28,6 +28,11 @@ interface Partner {
   description?: string
 }
 
+// Helper function to create slug from name
+function createSlug(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")
+}
+
 const partners: Partner[] = [
   // Premier Partners
   { name: "Manulife", category: "life", tier: "premier", description: "Comprehensive life and living benefits solutions" },
@@ -104,24 +109,26 @@ const regularPartners = partners.filter(p => p.tier === "partner")
 
 function PartnerCard({ partner }: { partner: Partner }) {
   return (
-    <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30">
-      <CardHeader className="pb-3">
-        <div className="flex items-center gap-3">
-          <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center border">
-            <Building2 className="h-6 w-6 text-primary" />
+    <Link to="/products/partners/$slug" params={{ slug: createSlug(partner.name) }}>
+      <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30 group cursor-pointer">
+        <CardHeader className="pb-3">
+          <div className="flex items-center gap-3">
+            <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center border">
+              <Building2 className="h-6 w-6 text-primary" />
+            </div>
+            <div>
+              <CardTitle className="text-base group-hover:text-primary transition-colors">{partner.name}</CardTitle>
+              <p className="text-xs text-muted-foreground capitalize">{partner.category.replace("_", " ")}</p>
+            </div>
           </div>
-          <div>
-            <CardTitle className="text-base">{partner.name}</CardTitle>
-            <p className="text-xs text-muted-foreground capitalize">{partner.category.replace("_", " ")}</p>
-          </div>
-        </div>
-      </CardHeader>
-      {partner.description && (
-        <CardContent className="pt-0">
-          <p className="text-sm text-muted-foreground">{partner.description}</p>
-        </CardContent>
-      )}
-    </Card>
+        </CardHeader>
+        {partner.description && (
+          <CardContent className="pt-0">
+            <p className="text-sm text-muted-foreground">{partner.description}</p>
+          </CardContent>
+        )}
+      </Card>
+    </Link>
   )
 }
 
@@ -319,19 +326,21 @@ function PartnersPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {regularPartners.map((partner, index) => (
               <BlurFade key={partner.name} delay={0.2 + index * 0.03} inView>
-                <Card className="hover:shadow-md transition-all hover:border-primary/20">
-                  <CardContent className="py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
-                        <Building2 className="h-5 w-5 text-muted-foreground" />
+                <Link to="/products/partners/$slug" params={{ slug: createSlug(partner.name) }}>
+                  <Card className="hover:shadow-md transition-all hover:border-primary/20 group cursor-pointer">
+                    <CardContent className="py-4">
+                      <div className="flex items-center gap-3">
+                        <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
+                          <Building2 className="h-5 w-5 text-muted-foreground" />
+                        </div>
+                        <div>
+                          <p className="font-medium text-sm group-hover:text-primary transition-colors">{partner.name}</p>
+                          <p className="text-xs text-muted-foreground capitalize">{partner.category}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="font-medium text-sm">{partner.name}</p>
-                        <p className="text-xs text-muted-foreground capitalize">{partner.category}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               </BlurFade>
             ))}
           </div>

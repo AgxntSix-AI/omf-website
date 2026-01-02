@@ -370,7 +370,7 @@
       "category": "products",
       "name": "Find an Advisor page",
       "description": "Advisor search with form",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/routes/products/find-advisor.tsx"],
       "dependencies": ["F401"]
     },
@@ -379,8 +379,8 @@
       "category": "products",
       "name": "Partners list page",
       "description": "30+ partners grid with logos",
-      "status": "pending",
-      "files": ["src/routes/products/partners/index.tsx"],
+      "status": "pass",
+      "files": ["src/routes/products/partners.tsx"],
       "dependencies": ["F401"]
     },
     {
@@ -434,7 +434,7 @@
       "category": "acquisitions",
       "name": "Acquisitions page",
       "description": "Acquisitions & Succession Planning single page",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/routes/acquisitions.tsx"],
       "dependencies": ["F107"]
     },
@@ -452,7 +452,7 @@
       "category": "seminars",
       "name": "Seminars page",
       "description": "Seminars listing (Strapi-ready)",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/routes/seminars.tsx"],
       "dependencies": ["F107"]
     },
@@ -615,7 +615,7 @@
       "category": "benefits",
       "name": "Advisor Benefits page",
       "description": "Benefits overview single page",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/routes/advisor-benefits.tsx"],
       "dependencies": ["F107"]
     },

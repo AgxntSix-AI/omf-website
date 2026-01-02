@@ -5,13 +5,17 @@ import { BlurFade } from "@/components/magic-ui/blur-fade"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/hero/pattern.svg')] opacity-5" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      {/* Background Pattern - Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-      {/* Gradient Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      {/* Gradient Orbs - More visible */}
+      <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+      <div className="absolute top-40 right-0 w-80 h-80 bg-accent/25 rounded-full blur-[80px]" />
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-primary/15 rounded-full blur-[60px]" />
+
+      {/* Top accent bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="container relative py-20 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -55,18 +59,21 @@ export function Hero() {
 
             {/* Stats */}
             <BlurFade delay={0.5} inView>
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t">
-                <div>
-                  <p className="text-3xl font-bold text-primary">30+</p>
-                  <p className="text-sm text-muted-foreground">Insurance Partners</p>
+              <div className="grid grid-cols-3 gap-4 pt-8">
+                <div className="relative p-4 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
+                  <p className="text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">30+</p>
+                  <p className="text-sm font-medium text-foreground/70">Insurance Partners</p>
+                  <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-accent/60" />
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-primary">2</p>
-                  <p className="text-sm text-muted-foreground">Office Locations</p>
+                <div className="relative p-4 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
+                  <p className="text-4xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">2</p>
+                  <p className="text-sm font-medium text-foreground/70">Office Locations</p>
+                  <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary/60" />
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-primary">50+</p>
-                  <p className="text-sm text-muted-foreground">Years Experience</p>
+                <div className="relative p-4 rounded-xl bg-gradient-to-br from-primary/10 to-accent/5 border border-primary/20">
+                  <p className="text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">50+</p>
+                  <p className="text-sm font-medium text-foreground/70">Years Experience</p>
+                  <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-accent/60" />
                 </div>
               </div>
             </BlurFade>
@@ -114,16 +121,22 @@ function FeatureCard({
   description: string
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/20">
+    <div className="group relative overflow-hidden rounded-2xl border-2 border-border/50 bg-gradient-to-br from-card via-card to-muted/30 p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-primary/40 hover:scale-[1.02]">
+      {/* Top gradient accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-t-2xl" />
+
       <div className="flex gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-          <Icon className="h-6 w-6" />
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 text-primary group-hover:from-primary group-hover:to-primary group-hover:text-primary-foreground transition-all duration-300 shadow-inner">
+          <Icon className="h-7 w-7" />
         </div>
         <div>
-          <h3 className="font-semibold text-foreground mb-1">{title}</h3>
-          <p className="text-sm text-muted-foreground">{description}</p>
+          <h3 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">{title}</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
         </div>
       </div>
+
+      {/* Subtle hover glow */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/0 to-accent/0 group-hover:from-primary/5 group-hover:to-accent/5 transition-all duration-300" />
     </div>
   )
 }

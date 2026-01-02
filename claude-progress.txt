@@ -1,13 +1,40 @@
 # Claude Progress - OM Financial Website
 
 Last Updated: 2026-01-02
-Session: 8
+Session: 9
 
 ## Current Status
 
 Phase 6A: SEO Static Files + Components - COMPLETE
 Phase 6B: Polish Pages - COMPLETE
 Phase 6C: Testing Suite - COMPLETE
+Phase 7: Deployment & CI - COMPLETE
+
+### Session 9: Deployment & CI - COMPLETE
+
+#### Vercel Deployment (F009)
+- [x] Created vercel.json with SPA rewrites
+- [x] Added cache headers for static assets
+- [x] Added security headers (CSP, X-Frame-Options, etc.)
+- [x] Deployed to production: https://omf-website-bay.vercel.app
+
+#### GitHub CI Workflow (F010)
+- [x] Created .github/workflows/ci.yml
+- [x] Lint & Type Check job (Bun 1.2)
+- [x] Unit Tests job (Vitest)
+- [x] E2E Tests job (Playwright with Chromium)
+- [x] Build job (with artifact upload)
+
+#### GHL Widget Integration
+- [x] Integrated GoHighLevel chat widget on contact page
+- [x] Dynamic script loading with cleanup
+- [x] Widget ID: 69575279b1df790eb46e7681
+
+#### TypeScript Fixes for Vercel Build
+- [x] Fixed type-only imports in blur-fade.tsx
+- [x] Fixed type-only import in marquee.tsx
+- [x] Removed unused Search import in not-found.tsx
+- [x] Removed unused otherPartners in products/index.tsx
 
 ## Completed This Session
 
@@ -181,24 +208,26 @@ All tests passing!
 
 ## Next Up
 
-Phase 6 COMPLETE - All features implemented and tested!
+Phase 7 COMPLETE - Deployed to Vercel!
+
+Live URL: https://omf-website-bay.vercel.app
 
 Remaining items for future work:
 - Partner logos (currently using text placeholders)
 - Team photos (using avatar fallbacks)
-- GHL chatbot widget embed code
 - Google Maps API key for embedded maps
 - Real blog/news content for Strapi integration
+- Custom domain setup (omfinancial.com)
 
 ## Blockers
 
 Waiting for:
 - Partner logos (currently using text placeholders)
 - Team photos (using avatar fallbacks)
-- GHL chatbot widget embed code
 - Google Maps API key for embedded maps
 - Additional team member information
 - Real blog/news content for CMS integration
+- Custom domain DNS configuration
 
 ## Notes
 
@@ -253,6 +282,14 @@ Waiting for:
 ---
 
 ## Session History
+
+### Session 9 - 2026-01-02
+- Created vercel.json with SPA rewrites, cache headers, security headers
+- Created .github/workflows/ci.yml with lint, test, e2e, build jobs
+- Integrated GHL chat widget on contact page
+- Fixed TypeScript strict mode errors for Vercel build
+- Deployed to Vercel production: https://omf-website-bay.vercel.app
+- Phase 7 (Deployment & CI) COMPLETE
 
 ### Session 8 - 2026-01-02
 - Created playwright.config.ts with multi-browser support

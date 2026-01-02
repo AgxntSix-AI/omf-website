@@ -5,43 +5,103 @@ Session: 1
 
 ## Current Status
 
-Phase 0: GitHub Repository Setup - IN PROGRESS
+Phase 1: Foundation - COMPLETED
 
 ## Completed This Session
 
+### Phase 0: Repository Setup
 - [x] Initialized git repository
 - [x] Created GitHub repo: https://github.com/AgxntSix-AI/omf-website
 - [x] Created .gitignore
 - [x] Created README.md
 - [x] Created CLAUDE.md (session protocol)
-- [x] Created claude-progress.txt (this file)
+- [x] Created claude-progress.txt
+- [x] Created docs/features.json (100+ features)
+- [x] Created init.sh (dev setup script)
+
+### Phase 1: Foundation
+- [x] Initialized Vite + React 19 + TypeScript (SWC)
+- [x] Installed core dependencies:
+  - @tanstack/react-router
+  - @tanstack/react-query
+  - react-hook-form + @hookform/resolvers
+  - zod
+  - lucide-react
+  - clsx, tailwind-merge, class-variance-authority
+- [x] Configured Tailwind CSS v4 with @tailwindcss/vite
+- [x] Created custom theme with brand colors:
+  - Lotus Burgundy: #7a3a40 (Primary)
+  - Laser Gold: #b8944d (Accent)
+  - Warm off-white backgrounds
+- [x] Initialized shadcn/ui with button + card components
+- [x] Setup TanStack Router with file-based routing
+- [x] Created placeholder layout components:
+  - src/components/layout/site-header.tsx (awaiting user navbar)
+  - src/components/layout/site-footer.tsx (awaiting user footer)
+- [x] Created root route (__root.tsx) with layout structure
+- [x] Created homepage route (index.tsx) with placeholder content
+- [x] Created SEO files:
+  - public/robots.txt (with AI bot rules)
+  - public/llms.txt (AEO manifest)
+  - public/favicon.svg
+
+### Folder Structure Created
+```
+public/
+├── images/
+│   ├── logos/
+│   │   └── partners/    # Place 30+ partner logos here
+│   ├── team/            # Place executive photos here
+│   ├── gallery/         # Place event photos here
+│   └── hero/            # Place hero images here
+├── robots.txt
+├── llms.txt
+└── favicon.svg
+```
 
 ## In Progress
 
-- [ ] Create docs/features.json (feature tracking)
-- [ ] Create init.sh (dev setup script)
-- [ ] Initialize Vite + React + TypeScript
-- [ ] Install dependencies
-- [ ] Setup Tailwind CSS v4
-- [ ] Initialize shadcn/ui
+- [ ] Add more shadcn/ui components (sheet, dialog, form, etc.)
+- [ ] Push to GitHub
 
 ## Next Up
 
-Feature ID: F001 - Project initialization with Vite
-Feature ID: F002 - Tailwind CSS v4 setup
-Feature ID: F003 - shadcn/ui initialization
+Feature ID: F005 - Site configuration files
+Feature ID: F101 - Asset folder structure (DONE)
+Feature ID: F102 - Site header placeholder (DONE - awaiting user)
+Feature ID: F103 - Site footer placeholder (DONE - awaiting user)
 
 ## Blockers
 
-None
+Waiting for user to provide:
+- Navbar component design
+- Footer component design
+- Cards component design
+- Logo files (place in public/images/logos/)
+- Team photos (place in public/images/team/)
 
 ## Notes
 
-- User will provide: Navbar, Footer, Cards components (use placeholders)
-- Virtgate is external link only
-- GHL chatbot will handle contact (form is secondary)
-- Calculators page: external links only (no custom calculators)
-- Strapi CMS is FUTURE priority (not in initial build)
+### Brand Colors (from Canva logo)
+- Lotus (Burgundy): #7b3e43 → refined to #7a3a40 for better contrast
+- Laser (Gold): #cda96a → refined to #b8944d for better contrast
+- Cararra (Off-white): #e9e9e5 → refined to warm cream tones
+- Bitter (Gray): #7b7c7a → NOT USED per client preference
+
+### Tech Stack Confirmed
+- Bun as package manager
+- React 19 + Vite 6
+- TanStack Router (file-based)
+- Tailwind CSS v4 + shadcn/ui
+- Vitest + Playwright for testing
+- Vercel for deployment
+
+### Important Decisions
+- No authentication needed (all public)
+- Virtgate = external link only
+- Calculators = external links only
+- GHL chatbot for contact (primary)
+- Strapi CMS = future priority
 
 ---
 
@@ -49,6 +109,7 @@ None
 
 ### Session 1 - 2026-01-01
 - Project kickoff
-- GitHub repo created
-- Foundational files created
-- Next: Complete Phase 1 (Foundation)
+- GitHub repo created: https://github.com/AgxntSix-AI/omf-website
+- Full foundation setup completed
+- Custom theme with brand colors designed
+- Ready for component development

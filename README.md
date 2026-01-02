@@ -61,6 +61,7 @@ src/
 
 - **Production:** https://omfinancial.com
 - **Staging:** https://omf-website.vercel.app
+- **Repository:** https://github.com/AgxntSix-AI/omf-website
 
 ## License
 

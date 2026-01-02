@@ -1,0 +1,576 @@
+/* ============================================================================
+   OM Financial Premium Theme
+   ============================================================================
+   A professional, trustworthy design system for a Canadian Insurance MGA
+
+   Brand Colors (from logo - Canva extraction):
+   - Lotus:   #7b3e43 → HSL(355, 32%, 36%) - Deep burgundy/maroon (Primary)
+   - Laser:   #cda96a → HSL(39, 47%, 61%)  - Warm gold/bronze (Accent)
+   - Cararra: #e9e9e5 → HSL(60, 6%, 91%)   - Light gray/off-white
+
+   Design Philosophy:
+   - Professional & trustworthy (financial services industry)
+   - Modern & clean (2026 web standards)
+   - Premium without being flashy
+   - WCAG AA accessible (4.5:1 contrast for text)
+
+   ============================================================================ */
+
+@theme {
+  /* ==========================================================================
+     BRAND COLORS - Core Identity
+     ========================================================================== */
+
+  /* Primary: Lotus - Refined for better contrast */
+  --color-omf-burgundy: #7a3a40;
+  --color-omf-burgundy-light: #8f4a51;
+  --color-omf-burgundy-dark: #5c2c31;
+
+  /* Accent: Laser Gold - Refined for better contrast on white */
+  --color-omf-gold: #b8944d;
+  --color-omf-gold-light: #d4b06a;
+  --color-omf-gold-dark: #8a6f3a;
+
+  /* Neutral: Warm off-white palette */
+  --color-omf-cream: #faf9f7;
+  --color-omf-ivory: #f5f4f1;
+  --color-omf-stone: #e8e7e3;
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+
+  /*
+   * Font Stack Recommendations:
+   * - Headings: "Fraunces" or "Playfair Display" for premium feel
+   * - Body: "Inter" for excellent readability
+   * - Alternative: "Source Serif Pro" for traditional insurance feel
+   */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces", "Playfair Display", "Source Serif Pro", Georgia, Cambria, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+  /* Font Sizes - Fluid typography scale */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+  --text-6xl: 3.75rem;     /* 60px */
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Font Weights */
+  --font-thin: 100;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* ==========================================================================
+     SPACING SCALE
+     ========================================================================== */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem;   /* 2px */
+  --space-1: 0.25rem;      /* 4px */
+  --space-1-5: 0.375rem;   /* 6px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-2-5: 0.625rem;   /* 10px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-3-5: 0.875rem;   /* 14px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-7: 1.75rem;      /* 28px */
+  --space-8: 2rem;         /* 32px */
+  --space-9: 2.25rem;      /* 36px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-11: 2.75rem;     /* 44px */
+  --space-12: 3rem;        /* 48px */
+  --space-14: 3.5rem;      /* 56px */
+  --space-16: 4rem;        /* 64px */
+  --space-20: 5rem;        /* 80px */
+  --space-24: 6rem;        /* 96px */
+  --space-28: 7rem;        /* 112px */
+  --space-32: 8rem;        /* 128px */
+
+  /* ==========================================================================
+     BORDER RADIUS - Refined for premium feel
+     ========================================================================== */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;    /* 4px - Subtle rounding */
+  --radius-md: 0.375rem;   /* 6px - Default */
+  --radius-lg: 0.5rem;     /* 8px - Cards, modals */
+  --radius-xl: 0.75rem;    /* 12px - Large cards */
+  --radius-2xl: 1rem;      /* 16px - Hero sections */
+  --radius-3xl: 1.5rem;    /* 24px - Feature cards */
+  --radius-full: 9999px;   /* Pills, avatars */
+
+  /* ==========================================================================
+     SHADOWS - Subtle, premium shadows
+     ========================================================================== */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+
+  /* Colored shadows for premium effect */
+  --shadow-burgundy: 0 4px 14px 0 rgb(122 58 64 / 0.15);
+  --shadow-gold: 0 4px 14px 0 rgb(184 148 77 / 0.2);
+
+  /* ==========================================================================
+     TRANSITIONS
+     ========================================================================== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slower: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================================
+   LIGHT MODE (Default)
+   ============================================================================
+   Primary palette uses Lotus burgundy for trust and authority.
+   Gold accents for CTAs and highlights.
+   Warm off-whites for backgrounds to avoid clinical feel.
+   ============================================================================ */
+
+:root {
+  /* --------------------------------------------------------------------------
+     Core UI Colors
+     -------------------------------------------------------------------------- */
+
+  /* Background: Warm off-white for premium feel */
+  --background: 40 20% 99%;           /* #FDFCFB - Slightly warmer than pure white */
+  --foreground: 355 28% 20%;          /* #412A2C - Deep burgundy-tinted dark */
+
+  /* Cards: Pure white to stand out from background */
+  --card: 0 0% 100%;                  /* #FFFFFF */
+  --card-foreground: 355 28% 20%;     /* #412A2C */
+
+  /* Popovers & Dropdowns */
+  --popover: 0 0% 100%;               /* #FFFFFF */
+  --popover-foreground: 355 28% 20%;  /* #412A2C */
+
+  /* --------------------------------------------------------------------------
+     Primary: Lotus Burgundy - Trust, authority, premium
+     Contrast ratio: 7.2:1 on white (AAA compliant)
+     -------------------------------------------------------------------------- */
+  --primary: 355 35% 35%;             /* #7A3A40 - Refined Lotus */
+  --primary-foreground: 0 0% 100%;    /* #FFFFFF */
+
+  /* --------------------------------------------------------------------------
+     Secondary: Muted burgundy tones
+     -------------------------------------------------------------------------- */
+  --secondary: 355 10% 95%;           /* #F4F1F2 - Very light burgundy tint */
+  --secondary-foreground: 355 28% 25%;/* #4D3537 */
+
+  /* --------------------------------------------------------------------------
+     Muted: For subtle UI elements
+     -------------------------------------------------------------------------- */
+  --muted: 40 10% 95%;                /* #F5F4F2 - Warm gray */
+  --muted-foreground: 355 8% 45%;     /* #7A7075 - Muted text */
+
+  /* --------------------------------------------------------------------------
+     Accent: Laser Gold - CTAs, highlights, special elements
+     Contrast ratio: 3.1:1 on white (use with large text or icons)
+     -------------------------------------------------------------------------- */
+  --accent: 39 42% 51%;               /* #B8944D - Refined gold */
+  --accent-foreground: 355 40% 15%;   /* #361C1E - Dark for contrast */
+
+  /* --------------------------------------------------------------------------
+     Interactive States
+     -------------------------------------------------------------------------- */
+  --ring: 355 35% 35%;                /* Focus ring matches primary */
+  --ring-offset: 0 0% 100%;           /* White offset */
+
+  /* Borders */
+  --border: 40 10% 90%;               /* #E8E6E3 - Warm gray border */
+  --input: 40 10% 90%;                /* Same as border */
+
+  /* --------------------------------------------------------------------------
+     Semantic Colors
+     -------------------------------------------------------------------------- */
+
+  /* Destructive: Error, delete, danger */
+  --destructive: 0 72% 51%;           /* #DC2626 - Clear red */
+  --destructive-foreground: 0 0% 100%;
+
+  /* Success: Confirmations, positive feedback */
+  --success: 142 71% 35%;             /* #15803D - Forest green */
+  --success-foreground: 0 0% 100%;
+
+  /* Warning: Cautions, important notices */
+  --warning: 38 92% 50%;              /* #F59E0B - Amber */
+  --warning-foreground: 38 92% 15%;   /* Dark amber for contrast */
+
+  /* Info: Neutral informational messages */
+  --info: 199 89% 48%;                /* #0EA5E9 - Sky blue */
+  --info-foreground: 0 0% 100%;
+
+  /* --------------------------------------------------------------------------
+     Chart Colors - Data Visualization Palette
+     Designed for accessibility and visual distinction
+     -------------------------------------------------------------------------- */
+  --chart-1: 355 35% 35%;             /* Burgundy - Primary data */
+  --chart-2: 39 42% 51%;              /* Gold - Secondary data */
+  --chart-3: 142 50% 40%;             /* Sage green - Tertiary */
+  --chart-4: 199 70% 45%;             /* Ocean blue - Quaternary */
+  --chart-5: 280 45% 50%;             /* Royal purple - Quinary */
+
+  /* Extended chart palette for complex visualizations */
+  --chart-6: 15 80% 55%;              /* Coral */
+  --chart-7: 175 60% 40%;             /* Teal */
+  --chart-8: 330 50% 55%;             /* Rose */
+
+  /* --------------------------------------------------------------------------
+     Sidebar - Advisor Portal Navigation
+     Premium dark sidebar for professional dashboard feel
+     -------------------------------------------------------------------------- */
+  --sidebar: 355 35% 12%;             /* Deep burgundy-black */
+  --sidebar-foreground: 40 20% 95%;   /* Warm off-white text */
+  --sidebar-primary: 39 42% 55%;      /* Gold for active items */
+  --sidebar-primary-foreground: 355 40% 10%;
+  --sidebar-accent: 355 25% 18%;      /* Slightly lighter for hover */
+  --sidebar-accent-foreground: 40 20% 95%;
+  --sidebar-border: 355 20% 20%;      /* Subtle burgundy border */
+  --sidebar-ring: 39 42% 55%;         /* Gold focus ring */
+  --sidebar-muted: 355 15% 25%;       /* Muted sidebar elements */
+  --sidebar-muted-foreground: 40 10% 70%;
+
+  /* --------------------------------------------------------------------------
+     Component-Specific Tokens
+     -------------------------------------------------------------------------- */
+
+  /* Navigation */
+  --nav-background: 0 0% 100%;
+  --nav-foreground: 355 28% 20%;
+  --nav-border: 40 10% 92%;
+
+  /* Buttons - Gold CTA styling */
+  --button-gold: 39 55% 50%;          /* Slightly more saturated for buttons */
+  --button-gold-hover: 39 55% 45%;
+  --button-gold-foreground: 355 40% 12%;
+
+  /* Tables */
+  --table-header: 40 10% 97%;
+  --table-row-hover: 40 10% 98%;
+  --table-border: 40 10% 92%;
+
+  /* Badges */
+  --badge-primary: 355 35% 35%;
+  --badge-secondary: 40 10% 92%;
+  --badge-gold: 39 60% 90%;
+  --badge-gold-foreground: 39 60% 30%;
+}
+
+/* ============================================================================
+   DARK MODE
+   ============================================================================
+   Deep burgundy-tinted dark backgrounds for premium night experience.
+   Gold accents become more prominent.
+   ============================================================================ */
+
+.dark {
+  /* --------------------------------------------------------------------------
+     Core UI Colors - Dark
+     -------------------------------------------------------------------------- */
+
+  /* Background: Deep burgundy-charcoal */
+  --background: 355 25% 8%;           /* #181214 - Very dark burgundy */
+  --foreground: 40 15% 92%;           /* #EDE9E4 - Warm off-white */
+
+  /* Cards: Slightly elevated from background */
+  --card: 355 20% 11%;                /* #1F1619 */
+  --card-foreground: 40 15% 92%;      /* #EDE9E4 */
+
+  /* Popovers */
+  --popover: 355 20% 13%;             /* #241A1D */
+  --popover-foreground: 40 15% 92%;   /* #EDE9E4 */
+
+  /* --------------------------------------------------------------------------
+     Primary - Lighter burgundy for dark mode
+     -------------------------------------------------------------------------- */
+  --primary: 355 40% 55%;             /* #B86B73 - Lighter burgundy */
+  --primary-foreground: 355 30% 8%;   /* Dark background */
+
+  /* --------------------------------------------------------------------------
+     Secondary
+     -------------------------------------------------------------------------- */
+  --secondary: 355 15% 16%;           /* #2A2023 */
+  --secondary-foreground: 40 15% 88%; /* #E5E0DA */
+
+  /* --------------------------------------------------------------------------
+     Muted
+     -------------------------------------------------------------------------- */
+  --muted: 355 12% 18%;               /* #302629 */
+  --muted-foreground: 40 8% 60%;      /* #9E9893 */
+
+  /* --------------------------------------------------------------------------
+     Accent - Gold brightens in dark mode
+     -------------------------------------------------------------------------- */
+  --accent: 39 55% 58%;               /* #D4A85A - Brighter gold */
+  --accent-foreground: 355 30% 8%;    /* Dark for contrast */
+
+  /* --------------------------------------------------------------------------
+     Interactive States - Dark
+     -------------------------------------------------------------------------- */
+  --ring: 39 55% 58%;                 /* Gold focus ring */
+  --ring-offset: 355 25% 8%;          /* Matches background */
+
+  --border: 355 15% 18%;              /* #2D2326 */
+  --input: 355 15% 20%;               /* #332A2D */
+
+  /* --------------------------------------------------------------------------
+     Semantic Colors - Dark Mode Adjustments
+     -------------------------------------------------------------------------- */
+
+  --destructive: 0 62% 55%;           /* Brighter red */
+  --destructive-foreground: 0 0% 100%;
+
+  --success: 142 60% 45%;             /* Brighter green */
+  --success-foreground: 0 0% 100%;
+
+  --warning: 38 92% 55%;              /* Brighter amber */
+  --warning-foreground: 38 92% 10%;
+
+  --info: 199 89% 55%;                /* Brighter blue */
+  --info-foreground: 199 89% 10%;
+
+  /* --------------------------------------------------------------------------
+     Chart Colors - Dark Mode
+     Increased brightness for visibility
+     -------------------------------------------------------------------------- */
+  --chart-1: 355 45% 60%;             /* Brighter burgundy */
+  --chart-2: 39 55% 60%;              /* Brighter gold */
+  --chart-3: 142 55% 50%;             /* Brighter green */
+  --chart-4: 199 75% 55%;             /* Brighter blue */
+  --chart-5: 280 50% 60%;             /* Brighter purple */
+  --chart-6: 15 85% 60%;              /* Brighter coral */
+  --chart-7: 175 65% 50%;             /* Brighter teal */
+  --chart-8: 330 55% 60%;             /* Brighter rose */
+
+  /* --------------------------------------------------------------------------
+     Sidebar - Dark Mode
+     Darker than page background for depth
+     -------------------------------------------------------------------------- */
+  --sidebar: 355 30% 5%;              /* Near black with burgundy tint */
+  --sidebar-foreground: 40 15% 90%;   /* Warm off-white */
+  --sidebar-primary: 39 55% 58%;      /* Gold */
+  --sidebar-primary-foreground: 355 30% 8%;
+  --sidebar-accent: 355 20% 10%;      /* Subtle hover */
+  --sidebar-accent-foreground: 40 15% 92%;
+  --sidebar-border: 355 20% 12%;
+  --sidebar-ring: 39 55% 58%;
+  --sidebar-muted: 355 15% 15%;
+  --sidebar-muted-foreground: 40 8% 55%;
+
+  /* --------------------------------------------------------------------------
+     Component-Specific - Dark
+     -------------------------------------------------------------------------- */
+
+  /* Navigation */
+  --nav-background: 355 25% 8%;
+  --nav-foreground: 40 15% 92%;
+  --nav-border: 355 15% 15%;
+
+  /* Buttons */
+  --button-gold: 39 55% 55%;
+  --button-gold-hover: 39 55% 50%;
+  --button-gold-foreground: 355 30% 8%;
+
+  /* Tables */
+  --table-header: 355 20% 10%;
+  --table-row-hover: 355 18% 12%;
+  --table-border: 355 15% 15%;
+
+  /* Badges */
+  --badge-primary: 355 40% 55%;
+  --badge-secondary: 355 15% 18%;
+  --badge-gold: 39 40% 20%;
+  --badge-gold-foreground: 39 55% 70%;
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+/* Gold gradient backgrounds */
+.bg-gradient-gold {
+  background: linear-gradient(135deg,
+    hsl(39, 55%, 55%) 0%,
+    hsl(39, 45%, 45%) 100%
+  );
+}
+
+/* Burgundy gradient backgrounds */
+.bg-gradient-burgundy {
+  background: linear-gradient(135deg,
+    hsl(355, 35%, 40%) 0%,
+    hsl(355, 35%, 28%) 100%
+  );
+}
+
+/* Premium card shadow on hover */
+.shadow-premium {
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.07),
+    0 2px 4px -2px rgb(0 0 0 / 0.05),
+    0 0 0 1px rgb(122 58 64 / 0.05);
+  transition: box-shadow 200ms ease;
+}
+
+.shadow-premium:hover {
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.08),
+    0 8px 10px -6px rgb(0 0 0 / 0.04),
+    0 0 0 1px rgb(122 58 64 / 0.08);
+}
+
+/* Glass effect for overlays */
+.glass {
+  background: rgb(255 255 255 / 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass {
+  background: rgb(24 18 20 / 0.8);
+}
+
+/* ============================================================================
+   TYPOGRAPHY PRESETS
+   ============================================================================ */
+
+/* Display headings - Large hero text */
+.text-display-1 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-display-2 {
+  font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Section headings */
+.text-heading-1 {
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.text-heading-2 {
+  font-size: clamp(1.5rem, 2.5vw + 0.25rem, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.text-heading-3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Body text */
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Captions and labels */
+.text-caption {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* ============================================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================================================ */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: 355 50% 30%;
+    --border: 355 20% 70%;
+    --muted-foreground: 355 15% 35%;
+  }
+
+  .dark {
+    --primary: 355 50% 70%;
+    --border: 355 20% 40%;
+    --muted-foreground: 40 10% 70%;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible enhancement for keyboard navigation */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Skip link styling */
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  padding: 1rem 1.5rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+}

@@ -9,38 +9,436 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SeminarsRouteImport } from './routes/seminars'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AdvisorBenefitsRouteImport } from './routes/advisor-benefits'
+import { Route as AcquisitionsRouteImport } from './routes/acquisitions'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProductsIndexRouteImport } from './routes/products/index'
+import { Route as AdvisorPortalIndexRouteImport } from './routes/advisor-portal/index'
+import { Route as AboutIndexRouteImport } from './routes/about/index'
+import { Route as ProductsPartnersRouteImport } from './routes/products/partners'
+import { Route as ProductsFindAdvisorRouteImport } from './routes/products/find-advisor'
+import { Route as AdvisorPortalUniversityRouteImport } from './routes/advisor-portal/university'
+import { Route as AdvisorPortalTrainingRouteImport } from './routes/advisor-portal/training'
+import { Route as AdvisorPortalToolboxRouteImport } from './routes/advisor-portal/toolbox'
+import { Route as AdvisorPortalIncentivesRouteImport } from './routes/advisor-portal/incentives'
+import { Route as AdvisorPortalForumRouteImport } from './routes/advisor-portal/forum'
+import { Route as AdvisorPortalComplianceRouteImport } from './routes/advisor-portal/compliance'
+import { Route as AdvisorPortalCalendarRouteImport } from './routes/advisor-portal/calendar'
+import { Route as AdvisorPortalCalculatorsRouteImport } from './routes/advisor-portal/calculators'
+import { Route as AdvisorPortalBlogsRouteImport } from './routes/advisor-portal/blogs'
+import { Route as AboutVisionMissionRouteImport } from './routes/about/vision-mission'
+import { Route as AboutNewsRouteImport } from './routes/about/news'
+import { Route as AboutLeadershipRouteImport } from './routes/about/leadership'
+import { Route as AboutHistoryRouteImport } from './routes/about/history'
+import { Route as AboutGalleryRouteImport } from './routes/about/gallery'
+import { Route as AboutExecutiveTeamRouteImport } from './routes/about/executive-team'
+import { Route as AboutDisclaimerRouteImport } from './routes/about/disclaimer'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeminarsRoute = SeminarsRouteImport.update({
+  id: '/seminars',
+  path: '/seminars',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorBenefitsRoute = AdvisorBenefitsRouteImport.update({
+  id: '/advisor-benefits',
+  path: '/advisor-benefits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcquisitionsRoute = AcquisitionsRouteImport.update({
+  id: '/acquisitions',
+  path: '/acquisitions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsIndexRoute = ProductsIndexRouteImport.update({
+  id: '/products/',
+  path: '/products/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalIndexRoute = AdvisorPortalIndexRouteImport.update({
+  id: '/advisor-portal/',
+  path: '/advisor-portal/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsPartnersRoute = ProductsPartnersRouteImport.update({
+  id: '/products/partners',
+  path: '/products/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsFindAdvisorRoute = ProductsFindAdvisorRouteImport.update({
+  id: '/products/find-advisor',
+  path: '/products/find-advisor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalUniversityRoute = AdvisorPortalUniversityRouteImport.update({
+  id: '/advisor-portal/university',
+  path: '/advisor-portal/university',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalTrainingRoute = AdvisorPortalTrainingRouteImport.update({
+  id: '/advisor-portal/training',
+  path: '/advisor-portal/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalToolboxRoute = AdvisorPortalToolboxRouteImport.update({
+  id: '/advisor-portal/toolbox',
+  path: '/advisor-portal/toolbox',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalIncentivesRoute = AdvisorPortalIncentivesRouteImport.update({
+  id: '/advisor-portal/incentives',
+  path: '/advisor-portal/incentives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalForumRoute = AdvisorPortalForumRouteImport.update({
+  id: '/advisor-portal/forum',
+  path: '/advisor-portal/forum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalComplianceRoute = AdvisorPortalComplianceRouteImport.update({
+  id: '/advisor-portal/compliance',
+  path: '/advisor-portal/compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalCalendarRoute = AdvisorPortalCalendarRouteImport.update({
+  id: '/advisor-portal/calendar',
+  path: '/advisor-portal/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvisorPortalCalculatorsRoute =
+  AdvisorPortalCalculatorsRouteImport.update({
+    id: '/advisor-portal/calculators',
+    path: '/advisor-portal/calculators',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AdvisorPortalBlogsRoute = AdvisorPortalBlogsRouteImport.update({
+  id: '/advisor-portal/blogs',
+  path: '/advisor-portal/blogs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutVisionMissionRoute = AboutVisionMissionRouteImport.update({
+  id: '/about/vision-mission',
+  path: '/about/vision-mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutNewsRoute = AboutNewsRouteImport.update({
+  id: '/about/news',
+  path: '/about/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutLeadershipRoute = AboutLeadershipRouteImport.update({
+  id: '/about/leadership',
+  path: '/about/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutHistoryRoute = AboutHistoryRouteImport.update({
+  id: '/about/history',
+  path: '/about/history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutGalleryRoute = AboutGalleryRouteImport.update({
+  id: '/about/gallery',
+  path: '/about/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutExecutiveTeamRoute = AboutExecutiveTeamRouteImport.update({
+  id: '/about/executive-team',
+  path: '/about/executive-team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutDisclaimerRoute = AboutDisclaimerRouteImport.update({
+  id: '/about/disclaimer',
+  path: '/about/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acquisitions': typeof AcquisitionsRoute
+  '/advisor-benefits': typeof AdvisorBenefitsRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/seminars': typeof SeminarsRoute
+  '/terms': typeof TermsRoute
+  '/about/disclaimer': typeof AboutDisclaimerRoute
+  '/about/executive-team': typeof AboutExecutiveTeamRoute
+  '/about/gallery': typeof AboutGalleryRoute
+  '/about/history': typeof AboutHistoryRoute
+  '/about/leadership': typeof AboutLeadershipRoute
+  '/about/news': typeof AboutNewsRoute
+  '/about/vision-mission': typeof AboutVisionMissionRoute
+  '/advisor-portal/blogs': typeof AdvisorPortalBlogsRoute
+  '/advisor-portal/calculators': typeof AdvisorPortalCalculatorsRoute
+  '/advisor-portal/calendar': typeof AdvisorPortalCalendarRoute
+  '/advisor-portal/compliance': typeof AdvisorPortalComplianceRoute
+  '/advisor-portal/forum': typeof AdvisorPortalForumRoute
+  '/advisor-portal/incentives': typeof AdvisorPortalIncentivesRoute
+  '/advisor-portal/toolbox': typeof AdvisorPortalToolboxRoute
+  '/advisor-portal/training': typeof AdvisorPortalTrainingRoute
+  '/advisor-portal/university': typeof AdvisorPortalUniversityRoute
+  '/products/find-advisor': typeof ProductsFindAdvisorRoute
+  '/products/partners': typeof ProductsPartnersRoute
+  '/about': typeof AboutIndexRoute
+  '/advisor-portal': typeof AdvisorPortalIndexRoute
+  '/products': typeof ProductsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acquisitions': typeof AcquisitionsRoute
+  '/advisor-benefits': typeof AdvisorBenefitsRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/seminars': typeof SeminarsRoute
+  '/terms': typeof TermsRoute
+  '/about/disclaimer': typeof AboutDisclaimerRoute
+  '/about/executive-team': typeof AboutExecutiveTeamRoute
+  '/about/gallery': typeof AboutGalleryRoute
+  '/about/history': typeof AboutHistoryRoute
+  '/about/leadership': typeof AboutLeadershipRoute
+  '/about/news': typeof AboutNewsRoute
+  '/about/vision-mission': typeof AboutVisionMissionRoute
+  '/advisor-portal/blogs': typeof AdvisorPortalBlogsRoute
+  '/advisor-portal/calculators': typeof AdvisorPortalCalculatorsRoute
+  '/advisor-portal/calendar': typeof AdvisorPortalCalendarRoute
+  '/advisor-portal/compliance': typeof AdvisorPortalComplianceRoute
+  '/advisor-portal/forum': typeof AdvisorPortalForumRoute
+  '/advisor-portal/incentives': typeof AdvisorPortalIncentivesRoute
+  '/advisor-portal/toolbox': typeof AdvisorPortalToolboxRoute
+  '/advisor-portal/training': typeof AdvisorPortalTrainingRoute
+  '/advisor-portal/university': typeof AdvisorPortalUniversityRoute
+  '/products/find-advisor': typeof ProductsFindAdvisorRoute
+  '/products/partners': typeof ProductsPartnersRoute
+  '/about': typeof AboutIndexRoute
+  '/advisor-portal': typeof AdvisorPortalIndexRoute
+  '/products': typeof ProductsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acquisitions': typeof AcquisitionsRoute
+  '/advisor-benefits': typeof AdvisorBenefitsRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/seminars': typeof SeminarsRoute
+  '/terms': typeof TermsRoute
+  '/about/disclaimer': typeof AboutDisclaimerRoute
+  '/about/executive-team': typeof AboutExecutiveTeamRoute
+  '/about/gallery': typeof AboutGalleryRoute
+  '/about/history': typeof AboutHistoryRoute
+  '/about/leadership': typeof AboutLeadershipRoute
+  '/about/news': typeof AboutNewsRoute
+  '/about/vision-mission': typeof AboutVisionMissionRoute
+  '/advisor-portal/blogs': typeof AdvisorPortalBlogsRoute
+  '/advisor-portal/calculators': typeof AdvisorPortalCalculatorsRoute
+  '/advisor-portal/calendar': typeof AdvisorPortalCalendarRoute
+  '/advisor-portal/compliance': typeof AdvisorPortalComplianceRoute
+  '/advisor-portal/forum': typeof AdvisorPortalForumRoute
+  '/advisor-portal/incentives': typeof AdvisorPortalIncentivesRoute
+  '/advisor-portal/toolbox': typeof AdvisorPortalToolboxRoute
+  '/advisor-portal/training': typeof AdvisorPortalTrainingRoute
+  '/advisor-portal/university': typeof AdvisorPortalUniversityRoute
+  '/products/find-advisor': typeof ProductsFindAdvisorRoute
+  '/products/partners': typeof ProductsPartnersRoute
+  '/about/': typeof AboutIndexRoute
+  '/advisor-portal/': typeof AdvisorPortalIndexRoute
+  '/products/': typeof ProductsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/acquisitions'
+    | '/advisor-benefits'
+    | '/contact'
+    | '/privacy'
+    | '/seminars'
+    | '/terms'
+    | '/about/disclaimer'
+    | '/about/executive-team'
+    | '/about/gallery'
+    | '/about/history'
+    | '/about/leadership'
+    | '/about/news'
+    | '/about/vision-mission'
+    | '/advisor-portal/blogs'
+    | '/advisor-portal/calculators'
+    | '/advisor-portal/calendar'
+    | '/advisor-portal/compliance'
+    | '/advisor-portal/forum'
+    | '/advisor-portal/incentives'
+    | '/advisor-portal/toolbox'
+    | '/advisor-portal/training'
+    | '/advisor-portal/university'
+    | '/products/find-advisor'
+    | '/products/partners'
+    | '/about'
+    | '/advisor-portal'
+    | '/products'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/acquisitions'
+    | '/advisor-benefits'
+    | '/contact'
+    | '/privacy'
+    | '/seminars'
+    | '/terms'
+    | '/about/disclaimer'
+    | '/about/executive-team'
+    | '/about/gallery'
+    | '/about/history'
+    | '/about/leadership'
+    | '/about/news'
+    | '/about/vision-mission'
+    | '/advisor-portal/blogs'
+    | '/advisor-portal/calculators'
+    | '/advisor-portal/calendar'
+    | '/advisor-portal/compliance'
+    | '/advisor-portal/forum'
+    | '/advisor-portal/incentives'
+    | '/advisor-portal/toolbox'
+    | '/advisor-portal/training'
+    | '/advisor-portal/university'
+    | '/products/find-advisor'
+    | '/products/partners'
+    | '/about'
+    | '/advisor-portal'
+    | '/products'
+  id:
+    | '__root__'
+    | '/'
+    | '/acquisitions'
+    | '/advisor-benefits'
+    | '/contact'
+    | '/privacy'
+    | '/seminars'
+    | '/terms'
+    | '/about/disclaimer'
+    | '/about/executive-team'
+    | '/about/gallery'
+    | '/about/history'
+    | '/about/leadership'
+    | '/about/news'
+    | '/about/vision-mission'
+    | '/advisor-portal/blogs'
+    | '/advisor-portal/calculators'
+    | '/advisor-portal/calendar'
+    | '/advisor-portal/compliance'
+    | '/advisor-portal/forum'
+    | '/advisor-portal/incentives'
+    | '/advisor-portal/toolbox'
+    | '/advisor-portal/training'
+    | '/advisor-portal/university'
+    | '/products/find-advisor'
+    | '/products/partners'
+    | '/about/'
+    | '/advisor-portal/'
+    | '/products/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcquisitionsRoute: typeof AcquisitionsRoute
+  AdvisorBenefitsRoute: typeof AdvisorBenefitsRoute
+  ContactRoute: typeof ContactRoute
+  PrivacyRoute: typeof PrivacyRoute
+  SeminarsRoute: typeof SeminarsRoute
+  TermsRoute: typeof TermsRoute
+  AboutDisclaimerRoute: typeof AboutDisclaimerRoute
+  AboutExecutiveTeamRoute: typeof AboutExecutiveTeamRoute
+  AboutGalleryRoute: typeof AboutGalleryRoute
+  AboutHistoryRoute: typeof AboutHistoryRoute
+  AboutLeadershipRoute: typeof AboutLeadershipRoute
+  AboutNewsRoute: typeof AboutNewsRoute
+  AboutVisionMissionRoute: typeof AboutVisionMissionRoute
+  AdvisorPortalBlogsRoute: typeof AdvisorPortalBlogsRoute
+  AdvisorPortalCalculatorsRoute: typeof AdvisorPortalCalculatorsRoute
+  AdvisorPortalCalendarRoute: typeof AdvisorPortalCalendarRoute
+  AdvisorPortalComplianceRoute: typeof AdvisorPortalComplianceRoute
+  AdvisorPortalForumRoute: typeof AdvisorPortalForumRoute
+  AdvisorPortalIncentivesRoute: typeof AdvisorPortalIncentivesRoute
+  AdvisorPortalToolboxRoute: typeof AdvisorPortalToolboxRoute
+  AdvisorPortalTrainingRoute: typeof AdvisorPortalTrainingRoute
+  AdvisorPortalUniversityRoute: typeof AdvisorPortalUniversityRoute
+  ProductsFindAdvisorRoute: typeof ProductsFindAdvisorRoute
+  ProductsPartnersRoute: typeof ProductsPartnersRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  AdvisorPortalIndexRoute: typeof AdvisorPortalIndexRoute
+  ProductsIndexRoute: typeof ProductsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seminars': {
+      id: '/seminars'
+      path: '/seminars'
+      fullPath: '/seminars'
+      preLoaderRoute: typeof SeminarsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-benefits': {
+      id: '/advisor-benefits'
+      path: '/advisor-benefits'
+      fullPath: '/advisor-benefits'
+      preLoaderRoute: typeof AdvisorBenefitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/acquisitions': {
+      id: '/acquisitions'
+      path: '/acquisitions'
+      fullPath: '/acquisitions'
+      preLoaderRoute: typeof AcquisitionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +446,185 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/': {
+      id: '/products/'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/': {
+      id: '/advisor-portal/'
+      path: '/advisor-portal'
+      fullPath: '/advisor-portal'
+      preLoaderRoute: typeof AdvisorPortalIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/partners': {
+      id: '/products/partners'
+      path: '/products/partners'
+      fullPath: '/products/partners'
+      preLoaderRoute: typeof ProductsPartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/find-advisor': {
+      id: '/products/find-advisor'
+      path: '/products/find-advisor'
+      fullPath: '/products/find-advisor'
+      preLoaderRoute: typeof ProductsFindAdvisorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/university': {
+      id: '/advisor-portal/university'
+      path: '/advisor-portal/university'
+      fullPath: '/advisor-portal/university'
+      preLoaderRoute: typeof AdvisorPortalUniversityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/training': {
+      id: '/advisor-portal/training'
+      path: '/advisor-portal/training'
+      fullPath: '/advisor-portal/training'
+      preLoaderRoute: typeof AdvisorPortalTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/toolbox': {
+      id: '/advisor-portal/toolbox'
+      path: '/advisor-portal/toolbox'
+      fullPath: '/advisor-portal/toolbox'
+      preLoaderRoute: typeof AdvisorPortalToolboxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/incentives': {
+      id: '/advisor-portal/incentives'
+      path: '/advisor-portal/incentives'
+      fullPath: '/advisor-portal/incentives'
+      preLoaderRoute: typeof AdvisorPortalIncentivesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/forum': {
+      id: '/advisor-portal/forum'
+      path: '/advisor-portal/forum'
+      fullPath: '/advisor-portal/forum'
+      preLoaderRoute: typeof AdvisorPortalForumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/compliance': {
+      id: '/advisor-portal/compliance'
+      path: '/advisor-portal/compliance'
+      fullPath: '/advisor-portal/compliance'
+      preLoaderRoute: typeof AdvisorPortalComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/calendar': {
+      id: '/advisor-portal/calendar'
+      path: '/advisor-portal/calendar'
+      fullPath: '/advisor-portal/calendar'
+      preLoaderRoute: typeof AdvisorPortalCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/calculators': {
+      id: '/advisor-portal/calculators'
+      path: '/advisor-portal/calculators'
+      fullPath: '/advisor-portal/calculators'
+      preLoaderRoute: typeof AdvisorPortalCalculatorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/advisor-portal/blogs': {
+      id: '/advisor-portal/blogs'
+      path: '/advisor-portal/blogs'
+      fullPath: '/advisor-portal/blogs'
+      preLoaderRoute: typeof AdvisorPortalBlogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/vision-mission': {
+      id: '/about/vision-mission'
+      path: '/about/vision-mission'
+      fullPath: '/about/vision-mission'
+      preLoaderRoute: typeof AboutVisionMissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/news': {
+      id: '/about/news'
+      path: '/about/news'
+      fullPath: '/about/news'
+      preLoaderRoute: typeof AboutNewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/leadership': {
+      id: '/about/leadership'
+      path: '/about/leadership'
+      fullPath: '/about/leadership'
+      preLoaderRoute: typeof AboutLeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/history': {
+      id: '/about/history'
+      path: '/about/history'
+      fullPath: '/about/history'
+      preLoaderRoute: typeof AboutHistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/gallery': {
+      id: '/about/gallery'
+      path: '/about/gallery'
+      fullPath: '/about/gallery'
+      preLoaderRoute: typeof AboutGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/executive-team': {
+      id: '/about/executive-team'
+      path: '/about/executive-team'
+      fullPath: '/about/executive-team'
+      preLoaderRoute: typeof AboutExecutiveTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/disclaimer': {
+      id: '/about/disclaimer'
+      path: '/about/disclaimer'
+      fullPath: '/about/disclaimer'
+      preLoaderRoute: typeof AboutDisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcquisitionsRoute: AcquisitionsRoute,
+  AdvisorBenefitsRoute: AdvisorBenefitsRoute,
+  ContactRoute: ContactRoute,
+  PrivacyRoute: PrivacyRoute,
+  SeminarsRoute: SeminarsRoute,
+  TermsRoute: TermsRoute,
+  AboutDisclaimerRoute: AboutDisclaimerRoute,
+  AboutExecutiveTeamRoute: AboutExecutiveTeamRoute,
+  AboutGalleryRoute: AboutGalleryRoute,
+  AboutHistoryRoute: AboutHistoryRoute,
+  AboutLeadershipRoute: AboutLeadershipRoute,
+  AboutNewsRoute: AboutNewsRoute,
+  AboutVisionMissionRoute: AboutVisionMissionRoute,
+  AdvisorPortalBlogsRoute: AdvisorPortalBlogsRoute,
+  AdvisorPortalCalculatorsRoute: AdvisorPortalCalculatorsRoute,
+  AdvisorPortalCalendarRoute: AdvisorPortalCalendarRoute,
+  AdvisorPortalComplianceRoute: AdvisorPortalComplianceRoute,
+  AdvisorPortalForumRoute: AdvisorPortalForumRoute,
+  AdvisorPortalIncentivesRoute: AdvisorPortalIncentivesRoute,
+  AdvisorPortalToolboxRoute: AdvisorPortalToolboxRoute,
+  AdvisorPortalTrainingRoute: AdvisorPortalTrainingRoute,
+  AdvisorPortalUniversityRoute: AdvisorPortalUniversityRoute,
+  ProductsFindAdvisorRoute: ProductsFindAdvisorRoute,
+  ProductsPartnersRoute: ProductsPartnersRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  AdvisorPortalIndexRoute: AdvisorPortalIndexRoute,
+  ProductsIndexRoute: ProductsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

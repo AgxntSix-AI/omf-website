@@ -55,9 +55,17 @@ cat docs/features.json | grep -A2 '"status": "pending"' | head -20  # 4. Next pe
 ### Component Libraries
 
 - **shadcn/ui** - Base UI components (button, card, dialog, form, etc.)
-- **Magic UI** - Premium animated components for hero sections, carousels, etc.
-  - Install components: `bunx --bun @magicuidesign/cli@latest add <component>`
-  - Available via MCP server in Claude
+  - Install: `bunx shadcn@latest add <component>`
+- **Magic UI** - Premium animated components for hero sections, carousels, marquees, etc.
+  - **MCP Server installed** - Use Magic UI MCP tools in Claude for component generation
+  - Components available: marquee, shine-border, animated-shiny-text, blur-fade, etc.
+  - Documentation: https://magicui.design
+
+### Development Approach
+
+- **Mobile-First**: Design for smallest screens first (280px foldable phones)
+- **Safari iOS 2026**: Primary mobile browser target
+- **Progressive Enhancement**: Add desktop features via responsive breakpoints
 
 ### Color Palette (from Canva Logo)
 
@@ -80,26 +88,24 @@ cat docs/features.json | grep -A2 '"status": "pending"' | head -20  # 4. Next pe
 
 ## Critical Constraints
 
-### WAIT FOR USER COMPONENTS
+### Component Status
 
-These components will be provided by the user - DO NOT create production versions:
-- `site-header.tsx` (Navbar) - PLACEHOLDER ONLY
-- `site-footer.tsx` (Footer) - PLACEHOLDER ONLY
-- Card components - PLACEHOLDER ONLY
+Core layout components have been built:
+- `site-header.tsx` - Full responsive navbar with mobile sheet menu
+- `site-footer.tsx` - Complete footer with social links and office info
+- Logo: `public/omf-logo.svg` (4.6MB SVG)
 
-Use placeholder components that can be swapped:
+### Placeholder Pattern for Images
+
+Use fallback content for missing images:
 
 ```tsx
-// Placeholder pattern
-export function SiteHeader() {
-  return (
-    <header className="h-16 border-b flex items-center px-4">
-      <span className="text-muted-foreground">
-        [PLACEHOLDER: Navbar - awaiting user component]
-      </span>
-    </header>
-  )
-}
+// Image placeholder pattern
+<div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/20 to-accent/20">
+  <div className="flex items-center justify-center h-full">
+    <p className="text-muted-foreground">Image placeholder</p>
+  </div>
+</div>
 ```
 
 ### Asset Placeholders

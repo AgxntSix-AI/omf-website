@@ -1,0 +1,5 @@
+export { Hero } from "./components/hero"
+export { ServicesGrid } from "./components/services-grid"
+export { PartnersMarquee } from "./components/partners-marquee"
+export { AboutPreview } from "./components/about-preview"
+export { CTASection } from "./components/cta-section"

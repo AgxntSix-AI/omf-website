@@ -12,6 +12,7 @@ import {
 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { BlurFade } from "@/components/magic-ui/blur-fade"
 
 const services = [
   {
@@ -77,48 +78,51 @@ export function ServicesGrid() {
     <section className="py-20 lg:py-28 bg-muted/30">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-sm font-medium text-primary mb-2">OUR SERVICES</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Comprehensive Financial Solutions
-          </h2>
-          <p className="text-muted-foreground">
-            We offer a full range of insurance and investment products through
-            our extensive network of top-tier Canadian carriers.
-          </p>
-        </div>
+        <BlurFade delay={0.1} inView>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-sm font-medium text-primary mb-2">OUR SERVICES</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Comprehensive Financial Solutions
+            </h2>
+            <p className="text-muted-foreground">
+              We offer a full range of insurance and investment products through
+              our extensive network of top-tier Canadian carriers.
+            </p>
+          </div>
+        </BlurFade>
 
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <Card
-              key={service.title}
-              className="group hover:shadow-lg transition-all hover:border-primary/20"
-            >
-              <CardHeader>
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <service.icon className="h-6 w-6" />
-                </div>
-                <CardTitle className="text-lg">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="mb-4">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+          {services.map((service, index) => (
+            <BlurFade key={service.title} delay={0.1 + index * 0.05} inView>
+              <Card className="group h-full hover:shadow-lg transition-all hover:border-primary/20">
+                <CardHeader>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-lg">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="mb-4">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </BlurFade>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <Button asChild variant="outline" size="lg" className="gap-2">
-            <Link to="/products">
-              View All Products
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
+        <BlurFade delay={0.6} inView>
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <Link to="/products">
+                View All Products
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </BlurFade>
       </div>
     </section>
   )

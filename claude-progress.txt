@@ -1,108 +1,103 @@
 # Claude Progress - OM Financial Website
 
 Last Updated: 2026-01-01
-Session: 2
+Session: 3
 
 ## Current Status
 
-Phase 2: Layout & Homepage - COMPLETED
+Phase 3: Magic UI + About Section - IN PROGRESS
 
 ## Completed This Session
 
-### Phase 2: Layout & Homepage
+### Session 3: Magic UI Integration + About Pages
 
-#### Layout Components (PRODUCTION READY)
-- [x] Site Header with full navigation
-  - Desktop mega menu with dropdowns
-  - Mobile sheet navigation
-  - Top contact bar
-  - Virtgate external link
-  - Logo integration (public/omf-logo.svg)
-- [x] Site Footer with all sections
-  - Company info + social links
-  - Navigation columns (Company, Services, Advisors)
-  - Office locations (Toronto, Mississauga)
-  - Contact info
-  - Copyright + legal links
+#### Magic UI Components Added
+- [x] Created src/components/magic-ui/marquee.tsx - Smooth marquee animation
+- [x] Created src/components/magic-ui/blur-fade.tsx - Entrance animations with blur
+- [x] Installed framer-motion for animation support
+- [x] Added CSS keyframes for marquee animations
 
-#### Homepage Sections
-- [x] Hero section with stats and feature cards
-- [x] Partners marquee (15 carriers, auto-scroll animation)
-- [x] Services grid (8 product categories)
-- [x] About preview section
-- [x] Dual CTA section (clients + advisors)
+#### Homepage Enhancements
+- [x] Partners marquee - Now uses Magic UI Marquee component
+  - Two-row layout with reverse animation on second row
+  - Pause on hover functionality
+  - Smooth gradient masks on edges
+- [x] Hero section - Added BlurFade animations
+  - Staggered entrance animations for all content
+  - Feature cards animate in sequence
+- [x] Services grid - Added BlurFade with stagger
+  - Cards fade in sequentially for visual interest
+  - Section header also animated
 
-#### Route Stubs Created (30+ pages)
-- About section: index, vision-mission, leadership, history, executive-team, news, gallery, disclaimer
-- Products: index, find-advisor, partners
-- Advisor Portal: index, calendar, training, blogs, toolbox, forum, compliance, university, calculators, incentives
-- Standalone: contact, seminars, acquisitions, advisor-benefits
-- Legal: privacy, terms
+#### About Section Pages (WITH REAL CONTENT)
+- [x] About Hub (/about) - Complete landing page
+  - Hero with company description
+  - Core values section (A Company with Heart, Ethics Before Profits, 50+ Years)
+  - Company description with stats grid
+  - Quick links to sub-pages
+  - Office locations section
+  - CTA section
+- [x] Vision & Mission (/about/vision-mission) - Full content
+  - Vision statement from existing site
+  - Mission pillars (Education, Technology, Talent)
+  - Core values checklist
+- [x] Leadership (/about/leadership) - Full content
+  - Rahul Bhardwaj profile (Chief Leader)
+  - Team overview section
+  - Contact information for both offices
 
-#### Configuration
-- [x] src/config/routes.ts - Central route registry
-- [x] Updated CLAUDE.md with Magic UI and mobile-first approach
-
-### Magic UI Integration
-- [x] MCP Server installed for Claude
-- [x] Ready to use via Claude MCP tools
+#### Content Scraped from omfinancial.com
+- About Us page content
+- Vision & Mission statements
+- Leadership information
+- Office contact details
 
 ## In Progress
 
-None - waiting for user direction on next features
+None - waiting for user direction
 
 ## Next Up
 
-Feature ID: F301 - About landing page content
+Feature ID: F304 - History & Strategy page
+Feature ID: F305 - Executive Team page
 Feature ID: F401 - Products page with partner grid
-Feature ID: F701 - Advisor Portal dashboard layout
-Feature ID: F901 - Contact page with form + map
+Feature ID: F901 - Contact page with GHL widget + map
 
 ## Blockers
 
-Waiting for user to provide:
-- Partner logos (place in public/images/logos/partners/)
-- Team photos (place in public/images/team/)
-- Content for About pages
-- Hero background images
+Waiting for:
+- Partner logos (currently using text placeholders)
+- Team photos (using avatar fallbacks)
+- GHL chatbot widget embed code
+- Additional team member information
 
 ## Notes
 
-### Logo
-- Located at: public/omf-logo.svg (4.6MB SVG)
-- Used in header and footer
+### Magic UI Components Available
+- Marquee - For partner logos, testimonials
+- BlurFade - For entrance animations
+- More can be added as needed
 
-### Brand Colors (from Canva logo)
-- Lotus (Burgundy): #7b3e43 → refined to #7a3a40 for better contrast
-- Laser (Gold): #cda96a → refined to #b8944d for better contrast
-- Cararra (Off-white): #e9e9e5 → refined to warm cream tones
-- Bitter (Gray): #7b7c7a → NOT USED per client preference
+### Content Source
+- Scraped from existing omfinancial.com WordPress site
+- Can fetch more pages as needed
 
-### Tech Stack Confirmed
-- Bun as package manager
-- React 19 + Vite 6
-- TanStack Router (file-based)
-- Tailwind CSS v4 + shadcn/ui + Magic UI
-- Vitest + Playwright for testing
-- Vercel for deployment
-
-### Development Approach
-- Mobile-first design (280px foldable phones minimum)
-- Safari iOS 2026 as primary target
-- Progressive enhancement for desktop
-
-### Important Decisions
-- No authentication needed (all public)
-- Virtgate = external link only
-- Calculators = external links only
-- GHL chatbot for contact (primary)
-- Strapi CMS = future priority
+### Dev Server Issue
+- esbuild EPIPE error when running `bun run dev` in background
+- Works fine when run in foreground
+- May be system resource issue with multiple background processes
 
 ---
 
 ## Session History
 
-### Session 2 - 2026-01-01 (continued)
+### Session 3 - 2026-01-01
+- Added Magic UI components (Marquee, BlurFade)
+- Enhanced homepage with animations
+- Built 3 About section pages with real scraped content
+- Installed framer-motion dependency
+
+### Session 2 - 2026-01-01
 - Built production site header with mega menu
 - Built production footer with full info
 - Created 5 homepage sections

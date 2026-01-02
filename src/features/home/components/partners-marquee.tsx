@@ -1,56 +1,34 @@
 import { Marquee } from "@/components/magic-ui/marquee"
 import { cn } from "@/lib/utils"
+import { partners, getLogoPath, type Partner } from "@/config/partners"
 
-interface Partner {
-  id: string
-  name: string
-}
-
-// Partner data - logos should be placed in public/images/logos/partners/
-const partners: Partner[] = [
-  { id: "sun-life", name: "Sun Life" },
-  { id: "manulife", name: "Manulife" },
-  { id: "canada-life", name: "Canada Life" },
-  { id: "desjardins", name: "Desjardins" },
-  { id: "industrial-alliance", name: "Industrial Alliance" },
-  { id: "equitable-life", name: "Equitable Life" },
-  { id: "empire-life", name: "Empire Life" },
-  { id: "ivari", name: "Ivari" },
-  { id: "foresters", name: "Foresters" },
-  { id: "rbc-insurance", name: "RBC Insurance" },
-  { id: "bmo-insurance", name: "BMO Insurance" },
-  { id: "beneva", name: "Beneva" },
-  { id: "wawanesa", name: "Wawanesa" },
-  { id: "assumption-life", name: "Assumption Life" },
-  { id: "humania", name: "Humania" },
-]
+// Featured partners for homepage display (premier + major tier)
+const featuredPartners = partners
+  .filter((p) => p.tier === "premier" || p.tier === "major")
+  .slice(0, 16)
 
 // Split partners into two rows for visual variety
-const firstRow = partners.slice(0, Math.ceil(partners.length / 2))
-const secondRow = partners.slice(Math.ceil(partners.length / 2))
+const firstRow = featuredPartners.slice(0, Math.ceil(featuredPartners.length / 2))
+const secondRow = featuredPartners.slice(Math.ceil(featuredPartners.length / 2))
 
 function PartnerCard({ partner }: { partner: Partner }) {
   return (
     <div
       className={cn(
-        "group relative flex h-20 w-40 shrink-0 items-center justify-center rounded-xl px-4 py-3",
-        "bg-gradient-to-br from-card via-card to-muted/50",
-        "border-2 border-border/50",
-        "shadow-md transition-all duration-300",
-        "hover:shadow-xl hover:border-primary/30 hover:scale-105",
-        "hover:from-primary/5 hover:via-card hover:to-accent/5"
+        "group relative flex h-20 w-40 sm:h-24 sm:w-48 shrink-0 items-center justify-center rounded-xl px-4 py-3",
+        "bg-card/50 hover:bg-card",
+        "border border-border/30 hover:border-primary/30",
+        "transition-all duration-300",
+        "hover:shadow-lg hover:scale-105"
       )}
     >
-      {/* Subtle top accent line */}
-      <div className="absolute top-0 left-4 right-4 h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent rounded-full" />
-
-      {/* Partner name with better styling */}
-      <span className="text-sm font-semibold text-foreground/80 text-center leading-tight group-hover:text-primary transition-colors">
-        {partner.name}
-      </span>
-
-      {/* Subtle bottom shine effect */}
-      <div className="absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      {/* Partner logo */}
+      <img
+        src={getLogoPath(partner.logo)}
+        alt={partner.name}
+        className="max-h-14 sm:max-h-16 max-w-full object-contain transition-transform group-hover:scale-110"
+        loading="lazy"
+      />
     </div>
   )
 }
@@ -99,7 +77,7 @@ export function PartnersMarquee() {
 
       <div className="container mt-8 text-center">
         <p className="text-sm text-muted-foreground">
-          And 15+ more insurance carriers across Canada
+          And {partners.length - featuredPartners.length}+ more insurance carriers across Canada
         </p>
       </div>
     </section>

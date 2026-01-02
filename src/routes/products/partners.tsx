@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router"
 import {
   ArrowLeft,
   ArrowRight,
-  Building2,
   Shield,
   Heart,
   Briefcase,
@@ -16,109 +15,68 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { BlurFade } from "@/components/magic-ui/blur-fade"
 import { Marquee } from "@/components/magic-ui/marquee"
+import {
+  partners,
+  premierPartners,
+  majorPartners,
+  regularPartners,
+  getLogoPath,
+  type Partner,
+} from "@/config/partners"
 
 export const Route = createFileRoute("/products/partners")({
   component: PartnersPage,
 })
-
-interface Partner {
-  name: string
-  category: "life" | "health" | "wealth" | "group" | "specialty"
-  tier: "premier" | "major" | "partner"
-  description?: string
-}
-
-// Helper function to create slug from name
-function createSlug(name: string): string {
-  return name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")
-}
-
-const partners: Partner[] = [
-  // Premier Partners
-  { name: "Manulife", category: "life", tier: "premier", description: "Comprehensive life and living benefits solutions" },
-  { name: "Sun Life", category: "life", tier: "premier", description: "Insurance, investments, and group benefits" },
-  { name: "Canada Life", category: "life", tier: "premier", description: "Individual and group insurance products" },
-  { name: "Desjardins Insurance", category: "life", tier: "premier", description: "Full suite of insurance and wealth solutions" },
-  { name: "iA Financial Group", category: "life", tier: "premier", description: "Insurance, savings, and retirement solutions" },
-  { name: "RBC Insurance", category: "life", tier: "premier", description: "Life, health, and travel insurance" },
-
-  // Major Partners
-  { name: "BMO Insurance", category: "life", tier: "major", description: "Life insurance and living benefits" },
-  { name: "Empire Life", category: "life", tier: "major", description: "Life insurance and wealth management" },
-  { name: "Equitable Life", category: "life", tier: "major", description: "Individual and group solutions" },
-  { name: "Foresters Financial", category: "life", tier: "major", description: "Life insurance with member benefits" },
-  { name: "Beneva", category: "life", tier: "major", description: "Insurance and financial services" },
-  { name: "Humania Assurance", category: "life", tier: "major", description: "Simplified issue life insurance" },
-
-  // Health & Benefits Partners
-  { name: "Green Shield Canada", category: "health", tier: "major", description: "Health and dental benefits" },
-  { name: "Blue Cross", category: "health", tier: "major", description: "Health, dental, and travel coverage" },
-  { name: "Medavie Blue Cross", category: "health", tier: "partner", description: "Health and travel insurance" },
-  { name: "ClaimSecure", category: "health", tier: "partner", description: "Health spending accounts" },
-
-  // Wealth Partners
-  { name: "CI Investments", category: "wealth", tier: "major", description: "Segregated funds and investments" },
-  { name: "Fidelity Investments", category: "wealth", tier: "major", description: "Investment solutions" },
-  { name: "AGF", category: "wealth", tier: "partner", description: "Investment management" },
-  { name: "Dynamic Funds", category: "wealth", tier: "partner", description: "Actively managed investments" },
-  { name: "Mackenzie Investments", category: "wealth", tier: "partner", description: "Mutual funds and ETFs" },
-
-  // Specialty Partners
-  { name: "Specialty Life", category: "specialty", tier: "partner", description: "Impaired risk specialists" },
-  { name: "Assumption Life", category: "specialty", tier: "partner", description: "Simplified and guaranteed issue" },
-  { name: "Edge Benefits", category: "specialty", tier: "partner", description: "Group benefits for small business" },
-  { name: "GroupHEALTH", category: "specialty", tier: "partner", description: "Innovative group solutions" },
-  { name: "Manulife Vitality", category: "specialty", tier: "partner", description: "Wellness-based insurance" },
-  { name: "Tugo", category: "specialty", tier: "major", description: "Travel insurance solutions" },
-  { name: "Allianz", category: "specialty", tier: "partner", description: "Travel and specialty insurance" },
-  { name: "GMS", category: "specialty", tier: "partner", description: "Travel and health insurance" },
-  { name: "21st Century", category: "specialty", tier: "partner", description: "Super visa and travel insurance" },
-  { name: "Destination Travel", category: "specialty", tier: "partner", description: "Travel insurance specialists" },
-]
 
 const categories = [
   {
     icon: Shield,
     title: "Life Insurance",
     description: "Term, whole life, universal life, and living benefits from Canada's top carriers.",
-    count: partners.filter(p => p.category === "life").length,
+    count: partners.filter((p) => p.category === "life").length,
   },
   {
     icon: Heart,
     title: "Health & Dental",
     description: "Individual and group health, dental, and extended healthcare coverage.",
-    count: partners.filter(p => p.category === "health").length,
+    count: partners.filter((p) => p.category === "health").length,
   },
   {
     icon: TrendingUp,
     title: "Wealth Management",
     description: "Segregated funds, RRSPs, TFSAs, RESPs, and investment solutions.",
-    count: partners.filter(p => p.category === "wealth").length,
+    count: partners.filter((p) => p.category === "wealth").length,
   },
   {
     icon: Briefcase,
     title: "Specialty Products",
     description: "Travel insurance, super visa, impaired risk, and niche solutions.",
-    count: partners.filter(p => p.category === "specialty").length,
+    count: partners.filter((p) => p.category === "specialty").length,
   },
 ]
 
-const premierPartners = partners.filter(p => p.tier === "premier")
-const majorPartners = partners.filter(p => p.tier === "major")
-const regularPartners = partners.filter(p => p.tier === "partner")
-
 function PartnerCard({ partner }: { partner: Partner }) {
   return (
-    <Link to="/products/partners/$slug" params={{ slug: createSlug(partner.name) }}>
+    <Link to="/products/partners/$slug" params={{ slug: partner.id }}>
       <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30 group cursor-pointer">
         <CardHeader className="pb-3">
-          <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center border">
-              <Building2 className="h-6 w-6 text-primary" />
+          <div className="flex items-center gap-4">
+            {/* Partner Logo */}
+            <div className="h-16 w-24 rounded-lg bg-muted/30 flex items-center justify-center shrink-0 p-2 group-hover:bg-muted/50 transition-colors">
+              <img
+                src={getLogoPath(partner.logo)}
+                alt={partner.name}
+                className="max-h-12 max-w-full object-contain"
+                loading="lazy"
+              />
             </div>
             <div>
-              <CardTitle className="text-base group-hover:text-primary transition-colors">{partner.name}</CardTitle>
-              <p className="text-xs text-muted-foreground capitalize">{partner.category.replace("_", " ")}</p>
+              <CardTitle className="text-base group-hover:text-primary transition-colors">
+                {partner.name}
+              </CardTitle>
+              <p className="text-xs text-muted-foreground capitalize">
+                {partner.category.replace("_", " ")}
+              </p>
             </div>
           </div>
         </CardHeader>
@@ -127,6 +85,34 @@ function PartnerCard({ partner }: { partner: Partner }) {
             <p className="text-sm text-muted-foreground">{partner.description}</p>
           </CardContent>
         )}
+      </Card>
+    </Link>
+  )
+}
+
+function SmallPartnerCard({ partner }: { partner: Partner }) {
+  return (
+    <Link to="/products/partners/$slug" params={{ slug: partner.id }}>
+      <Card className="hover:shadow-md transition-all hover:border-primary/20 group cursor-pointer">
+        <CardContent className="py-4">
+          <div className="flex items-center gap-3">
+            {/* Partner Logo */}
+            <div className="h-14 w-20 rounded-lg bg-muted/30 flex items-center justify-center shrink-0 p-2 group-hover:bg-muted/50 transition-colors">
+              <img
+                src={getLogoPath(partner.logo)}
+                alt={partner.name}
+                className="max-h-10 max-w-full object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="font-medium text-sm group-hover:text-primary transition-colors">
+                {partner.name}
+              </p>
+              <p className="text-xs text-muted-foreground capitalize">{partner.category}</p>
+            </div>
+          </div>
+        </CardContent>
       </Card>
     </Link>
   )
@@ -163,7 +149,7 @@ function PartnersPage() {
             </BlurFade>
             <BlurFade delay={0.3} inView>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We've partnered with 30+ of Canada's most trusted insurance and investment
+                We've partnered with {partners.length}+ of Canada's most trusted insurance and investment
                 companies to bring you the best products and solutions for your clients.
               </p>
             </BlurFade>
@@ -177,7 +163,7 @@ function PartnersPage() {
           <BlurFade delay={0.1} inView>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">30+</div>
+                <div className="text-4xl font-bold text-primary mb-2">{partners.length}+</div>
                 <div className="text-sm text-muted-foreground">Insurance Partners</div>
               </div>
               <div>
@@ -237,7 +223,7 @@ function PartnersPage() {
         </div>
       </section>
 
-      {/* Partner Marquee */}
+      {/* Partner Marquee with Logos */}
       <section className="py-12 bg-muted/30 border-y overflow-hidden">
         <div className="container mb-8">
           <BlurFade delay={0.1} inView>
@@ -246,13 +232,18 @@ function PartnersPage() {
             </h2>
           </BlurFade>
         </div>
-        <Marquee pauseOnHover className="[--duration:40s]">
-          {partners.map((partner) => (
+        <Marquee pauseOnHover className="[--duration:40s] [--gap:1.5rem]">
+          {partners.slice(0, 20).map((partner) => (
             <div
-              key={partner.name}
-              className="mx-4 flex items-center justify-center h-16 px-6 bg-background rounded-lg border hover:border-primary/30 transition-colors"
+              key={partner.id}
+              className="flex items-center justify-center h-16 w-36 px-4 bg-card/50 hover:bg-card rounded-lg border border-border/30 hover:border-primary/30 hover:shadow-md transition-all"
             >
-              <span className="font-medium text-foreground whitespace-nowrap">{partner.name}</span>
+              <img
+                src={getLogoPath(partner.logo)}
+                alt={partner.name}
+                className="max-h-12 max-w-full object-contain"
+                loading="lazy"
+              />
             </div>
           ))}
         </Marquee>
@@ -268,14 +259,16 @@ function PartnersPage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-foreground">Premier Partners</h2>
-                <p className="text-sm text-muted-foreground">Our strategic partnerships with Canada's largest insurers</p>
+                <p className="text-sm text-muted-foreground">
+                  Our strategic partnerships with Canada's largest insurers
+                </p>
               </div>
             </div>
           </BlurFade>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {premierPartners.map((partner, index) => (
-              <BlurFade key={partner.name} delay={0.2 + index * 0.05} inView>
+              <BlurFade key={partner.id} delay={0.2 + index * 0.05} inView>
                 <PartnerCard partner={partner} />
               </BlurFade>
             ))}
@@ -293,14 +286,16 @@ function PartnersPage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-foreground">Major Partners</h2>
-                <p className="text-sm text-muted-foreground">Established relationships with leading carriers</p>
+                <p className="text-sm text-muted-foreground">
+                  Established relationships with leading carriers
+                </p>
               </div>
             </div>
           </BlurFade>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {majorPartners.map((partner, index) => (
-              <BlurFade key={partner.name} delay={0.2 + index * 0.05} inView>
+              <BlurFade key={partner.id} delay={0.2 + index * 0.05} inView>
                 <PartnerCard partner={partner} />
               </BlurFade>
             ))}
@@ -314,33 +309,21 @@ function PartnersPage() {
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-8">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-muted text-muted-foreground">
-                <Building2 className="h-5 w-5" />
+                <Briefcase className="h-5 w-5" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-foreground">Additional Partners</h2>
-                <p className="text-sm text-muted-foreground">Specialized carriers for niche products and solutions</p>
+                <p className="text-sm text-muted-foreground">
+                  Specialized carriers for niche products and solutions
+                </p>
               </div>
             </div>
           </BlurFade>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {regularPartners.map((partner, index) => (
-              <BlurFade key={partner.name} delay={0.2 + index * 0.03} inView>
-                <Link to="/products/partners/$slug" params={{ slug: createSlug(partner.name) }}>
-                  <Card className="hover:shadow-md transition-all hover:border-primary/20 group cursor-pointer">
-                    <CardContent className="py-4">
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
-                          <Building2 className="h-5 w-5 text-muted-foreground" />
-                        </div>
-                        <div>
-                          <p className="font-medium text-sm group-hover:text-primary transition-colors">{partner.name}</p>
-                          <p className="text-xs text-muted-foreground capitalize">{partner.category}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
+              <BlurFade key={partner.id} delay={0.2 + index * 0.03} inView>
+                <SmallPartnerCard partner={partner} />
               </BlurFade>
             ))}
           </div>
@@ -356,7 +339,8 @@ function PartnersPage() {
                 Benefits of Our Partner Network
               </h2>
               <p className="text-muted-foreground">
-                Our extensive partner relationships translate into better outcomes for advisors and clients.
+                Our extensive partner relationships translate into better outcomes for advisors and
+                clients.
               </p>
             </div>
           </BlurFade>
@@ -407,8 +391,8 @@ function PartnersPage() {
               Ready to Access Our Partner Network?
             </h2>
             <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-              Join OM Financial and gain access to 30+ insurance carriers and investment
-              partners to serve your clients better.
+              Join OM Financial and gain access to {partners.length}+ insurance carriers and
+              investment partners to serve your clients better.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="gap-2">

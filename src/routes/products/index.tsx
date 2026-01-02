@@ -11,12 +11,19 @@ import {
   FileText,
   ArrowRight,
   Search,
-  Handshake
+  Handshake,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { BlurFade } from "@/components/magic-ui/blur-fade"
 import { Marquee } from "@/components/magic-ui/marquee"
+import {
+  partners,
+  premierPartners,
+  majorPartners,
+  getLogoPath,
+  type Partner,
+} from "@/config/partners"
 
 export const Route = createFileRoute("/products/")({
   component: ProductsPage,
@@ -73,32 +80,15 @@ const productCategories = [
   },
 ]
 
-const partners = [
-  { name: "Sun Life", tier: "premier" },
-  { name: "Canada Life", tier: "premier" },
-  { name: "Manulife", tier: "premier" },
-  { name: "RBC Insurance", tier: "premier" },
-  { name: "iA Financial", tier: "major" },
-  { name: "Empire Life", tier: "major" },
-  { name: "Foresters", tier: "major" },
-  { name: "Ivari", tier: "major" },
-  { name: "Assumption Life", tier: "partner" },
-  { name: "Co-operators", tier: "partner" },
-  { name: "CUMIS", tier: "partner" },
-  { name: "B2B Insurance", tier: "partner" },
-  { name: "GMS", tier: "partner" },
-  { name: "BMO Insurance", tier: "partner" },
-  { name: "UV Insurance", tier: "partner" },
-  { name: "My Dignity", tier: "partner" },
-]
-
-const premierPartners = partners.filter(p => p.tier === "premier")
-const majorPartners = partners.filter(p => p.tier === "major")
-
-function PartnerCard({ name }: { name: string }) {
+function PartnerLogoCard({ partner }: { partner: Partner }) {
   return (
-    <div className="flex items-center justify-center h-20 px-8 bg-card border rounded-lg mx-2">
-      <span className="font-semibold text-foreground whitespace-nowrap">{name}</span>
+    <div className="flex items-center justify-center h-18 w-40 px-4 bg-card/50 hover:bg-card rounded-lg border border-border/30 mx-2 hover:border-primary/30 hover:shadow-md transition-all">
+      <img
+        src={getLogoPath(partner.logo)}
+        alt={partner.name}
+        className="max-h-12 max-w-full object-contain"
+        loading="lazy"
+      />
     </div>
   )
 }
@@ -134,7 +124,7 @@ function ProductsPage() {
           <BlurFade delay={0.1} inView>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">30+</div>
+                <div className="text-4xl font-bold text-primary mb-2">{partners.length}+</div>
                 <div className="text-sm text-muted-foreground">Insurance Carriers</div>
               </div>
               <div>
@@ -180,9 +170,7 @@ function ProductsPage() {
                       <category.icon className="h-6 w-6" />
                     </div>
                     <CardTitle className="text-lg">{category.title}</CardTitle>
-                    <CardDescription className="text-sm">
-                      {category.description}
-                    </CardDescription>
+                    <CardDescription className="text-sm">{category.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-1">
@@ -218,8 +206,8 @@ function ProductsPage() {
                       Need Help Choosing the Right Product?
                     </h3>
                     <p className="text-muted-foreground">
-                      Connect with a licensed advisor who can assess your needs and recommend
-                      the best solutions for you and your family.
+                      Connect with a licensed advisor who can assess your needs and recommend the
+                      best solutions for you and your family.
                     </p>
                   </div>
                   <Button asChild size="lg" className="gap-2 shrink-0">
@@ -247,62 +235,94 @@ function ProductsPage() {
                 Our Insurance Partners
               </h2>
               <p className="text-muted-foreground">
-                We partner with Canada's most trusted insurance carriers to bring you
-                competitive products and exceptional service.
+                We partner with Canada's most trusted insurance carriers to bring you competitive
+                products and exceptional service.
               </p>
             </div>
           </BlurFade>
 
-          {/* Premier Partners */}
+          {/* Premier Partners with Logos */}
           <BlurFade delay={0.2} inView>
             <div className="mb-12">
               <h3 className="text-lg font-semibold text-foreground text-center mb-6">
                 Premier Partners
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
                 {premierPartners.map((partner) => (
-                  <Card key={partner.name} className="hover:shadow-md transition-shadow">
-                    <CardContent className="py-6 text-center">
-                      <span className="font-semibold text-foreground">{partner.name}</span>
-                    </CardContent>
-                  </Card>
+                  <Link
+                    key={partner.id}
+                    to="/products/partners/$slug"
+                    params={{ slug: partner.id }}
+                  >
+                    <Card className="hover:shadow-md transition-all hover:border-primary/30 cursor-pointer group">
+                      <CardContent className="py-4 flex flex-col items-center gap-2">
+                        <div className="h-14 w-full flex items-center justify-center bg-muted/30 rounded-lg p-2 group-hover:bg-muted/50 transition-colors">
+                          <img
+                            src={getLogoPath(partner.logo)}
+                            alt={partner.name}
+                            className="max-h-10 max-w-full object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                        <span className="text-xs text-muted-foreground text-center">
+                          {partner.name}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </div>
           </BlurFade>
 
-          {/* Major Partners */}
+          {/* Major Partners with Logos */}
           <BlurFade delay={0.3} inView>
             <div className="mb-12">
               <h3 className="text-lg font-semibold text-foreground text-center mb-6">
                 Major Partners
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 max-w-5xl mx-auto">
                 {majorPartners.map((partner) => (
-                  <Card key={partner.name} className="hover:shadow-md transition-shadow">
-                    <CardContent className="py-6 text-center">
-                      <span className="font-medium text-foreground">{partner.name}</span>
-                    </CardContent>
-                  </Card>
+                  <Link
+                    key={partner.id}
+                    to="/products/partners/$slug"
+                    params={{ slug: partner.id }}
+                  >
+                    <Card className="hover:shadow-md transition-all hover:border-primary/30 cursor-pointer group">
+                      <CardContent className="py-3 flex flex-col items-center gap-1">
+                        <div className="h-12 w-full flex items-center justify-center bg-muted/30 rounded p-1.5 group-hover:bg-muted/50 transition-colors">
+                          <img
+                            src={getLogoPath(partner.logo)}
+                            alt={partner.name}
+                            className="max-h-8 max-w-full object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                        <span className="text-[10px] text-muted-foreground text-center truncate w-full">
+                          {partner.name}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </div>
           </BlurFade>
 
-          {/* Partner Marquee */}
+          {/* Partner Marquee with Logos */}
           <BlurFade delay={0.4} inView>
             <div className="relative max-w-5xl mx-auto">
               <h3 className="text-lg font-semibold text-foreground text-center mb-6">
                 All Partners
               </h3>
-              <Marquee pauseOnHover className="[--duration:40s]">
-                {partners.map((partner) => (
-                  <PartnerCard key={partner.name} name={partner.name} />
+              <Marquee pauseOnHover className="[--duration:40s] [--gap:1rem]">
+                {partners.slice(0, 18).map((partner) => (
+                  <PartnerLogoCard key={partner.id} partner={partner} />
                 ))}
               </Marquee>
-              <Marquee reverse pauseOnHover className="[--duration:40s] mt-4">
-                {[...partners].reverse().map((partner) => (
-                  <PartnerCard key={partner.name} name={partner.name} />
+              <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:1rem] mt-4">
+                {partners.slice(18).map((partner) => (
+                  <PartnerLogoCard key={partner.id} partner={partner} />
                 ))}
               </Marquee>
             </div>
@@ -325,12 +345,10 @@ function ProductsPage() {
       <section className="py-16 lg:py-20 bg-primary text-primary-foreground">
         <div className="container text-center">
           <BlurFade delay={0.1} inView>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Ready to Get Started?
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-              Whether you're looking for personal coverage or business solutions,
-              our team is here to help you find the right fit.
+              Whether you're looking for personal coverage or business solutions, our team is here
+              to help you find the right fit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="gap-2">
@@ -339,7 +357,12 @@ function ProductsPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+              >
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

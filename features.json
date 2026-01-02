@@ -723,7 +723,7 @@
       "category": "seo",
       "name": "robots.txt",
       "description": "SEO + AI bot rules",
-      "status": "pending",
+      "status": "pass",
       "files": ["public/robots.txt"],
       "dependencies": ["F001"]
     },
@@ -732,7 +732,7 @@
       "category": "seo",
       "name": "llms.txt (AEO)",
       "description": "AI crawler manifest for Answer Engine Optimization",
-      "status": "pending",
+      "status": "pass",
       "files": ["public/llms.txt"],
       "dependencies": ["F001"]
     },
@@ -741,7 +741,7 @@
       "category": "seo",
       "name": "Sitemap generator",
       "description": "Auto-generate sitemap.xml on build",
-      "status": "pending",
+      "status": "pass",
       "files": ["scripts/generate-sitemap.ts", "public/sitemap.xml"],
       "dependencies": ["F001"]
     },
@@ -750,7 +750,7 @@
       "category": "seo",
       "name": "Meta tags component",
       "description": "Reusable meta tags with OG + Twitter",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/components/seo/meta-tags.tsx"],
       "dependencies": ["F004"]
     },
@@ -759,7 +759,7 @@
       "category": "seo",
       "name": "Structured data library",
       "description": "JSON-LD schema generators",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/lib/structured-data.ts"],
       "dependencies": ["F005"]
     },
@@ -768,7 +768,7 @@
       "category": "seo",
       "name": "Organization schema",
       "description": "JSON-LD Organization structured data",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/lib/structured-data.ts"],
       "dependencies": ["S005"]
     },
@@ -777,7 +777,7 @@
       "category": "seo",
       "name": "LocalBusiness schema - Toronto",
       "description": "JSON-LD for Toronto office",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/lib/structured-data.ts"],
       "dependencies": ["S005"]
     },
@@ -786,7 +786,7 @@
       "category": "seo",
       "name": "LocalBusiness schema - Mississauga",
       "description": "JSON-LD for Mississauga office",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/lib/structured-data.ts"],
       "dependencies": ["S005"]
     },
@@ -795,7 +795,7 @@
       "category": "seo",
       "name": "FAQ schema",
       "description": "FAQ structured data for common questions",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/lib/structured-data.ts"],
       "dependencies": ["S005"]
     },
@@ -804,7 +804,7 @@
       "category": "seo",
       "name": "Breadcrumbs schema",
       "description": "BreadcrumbList structured data",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/components/layout/breadcrumbs.tsx"],
       "dependencies": ["F105"]
     },
@@ -813,7 +813,7 @@
       "category": "seo",
       "name": "Open Graph image",
       "description": "Default OG image for social sharing",
-      "status": "pending",
+      "status": "pass",
       "files": ["public/images/og-image.png"],
       "dependencies": ["F101"]
     },
@@ -822,7 +822,7 @@
       "category": "seo",
       "name": "Favicon set",
       "description": "Favicon.ico and favicon.svg",
-      "status": "pending",
+      "status": "pass",
       "files": ["public/favicon.ico", "public/favicon.svg"],
       "dependencies": ["F001"]
     },
@@ -831,7 +831,7 @@
       "category": "seo",
       "name": "Image optimization component",
       "description": "Lazy loading, WebP/AVIF, fallback",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/components/shared/image-with-fallback.tsx"],
       "dependencies": ["F003"]
     },
@@ -930,8 +930,8 @@
       "category": "polish",
       "name": "404 page",
       "description": "Custom 404 error page",
-      "status": "pending",
-      "files": ["src/routes/404.tsx"],
+      "status": "pass",
+      "files": ["src/components/shared/not-found.tsx"],
       "dependencies": ["F107"]
     },
     {
@@ -939,8 +939,8 @@
       "category": "polish",
       "name": "500 error page",
       "description": "Server error page",
-      "status": "pending",
-      "files": ["src/routes/500.tsx"],
+      "status": "pass",
+      "files": ["src/components/shared/error-boundary.tsx"],
       "dependencies": ["F107"]
     },
     {
@@ -948,7 +948,7 @@
       "category": "polish",
       "name": "Error boundary",
       "description": "React error boundary component",
-      "status": "pending",
+      "status": "pass",
       "files": ["src/components/shared/error-boundary.tsx"],
       "dependencies": ["F004"]
     }

@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /advisor-portal/
 
 # AI Crawlers - Welcome for AEO
 User-agent: GPTBot

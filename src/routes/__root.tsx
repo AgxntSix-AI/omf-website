@@ -2,6 +2,8 @@ import { createRootRoute, Outlet, ScrollRestoration } from '@tanstack/react-rout
 import { Suspense, lazy } from 'react'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
+import { NotFound } from '@/components/shared/not-found'
+import { ErrorFallback } from '@/components/shared/error-boundary'
 
 // Lazy load TanStack Router Devtools in development only
 const TanStackRouterDevtools = import.meta.env.PROD
@@ -14,6 +16,8 @@ const TanStackRouterDevtools = import.meta.env.PROD
 
 export const Route = createRootRoute({
   component: RootLayout,
+  notFoundComponent: NotFound,
+  errorComponent: ErrorFallback,
 })
 
 function RootLayout() {

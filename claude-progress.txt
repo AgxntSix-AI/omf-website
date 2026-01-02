@@ -1,99 +1,76 @@
 # Claude Progress - OM Financial Website
 
 Last Updated: 2026-01-01
-Session: 1
+Session: 2
 
 ## Current Status
 
-Phase 1: Foundation - COMPLETED
+Phase 2: Layout & Homepage - COMPLETED
 
 ## Completed This Session
 
-### Phase 0: Repository Setup
-- [x] Initialized git repository
-- [x] Created GitHub repo: https://github.com/AgxntSix-AI/omf-website
-- [x] Created .gitignore
-- [x] Created README.md
-- [x] Created CLAUDE.md (session protocol)
-- [x] Created claude-progress.txt
-- [x] Created docs/features.json (100+ features)
-- [x] Created init.sh (dev setup script)
+### Phase 2: Layout & Homepage
 
-### Phase 1: Foundation
-- [x] Initialized Vite + React 19 + TypeScript (SWC)
-- [x] Installed core dependencies:
-  - @tanstack/react-router
-  - @tanstack/react-query
-  - react-hook-form + @hookform/resolvers
-  - zod
-  - lucide-react
-  - clsx, tailwind-merge, class-variance-authority
-- [x] Configured Tailwind CSS v4 with @tailwindcss/vite
-- [x] Created custom theme with brand colors:
-  - Lotus Burgundy: #7a3a40 (Primary)
-  - Laser Gold: #b8944d (Accent)
-  - Warm off-white backgrounds
-- [x] Initialized shadcn/ui with button + card components
-- [x] Setup TanStack Router with file-based routing
-- [x] Created placeholder layout components:
-  - src/components/layout/site-header.tsx (awaiting user navbar)
-  - src/components/layout/site-footer.tsx (awaiting user footer)
-- [x] Created root route (__root.tsx) with layout structure
-- [x] Created homepage route (index.tsx) with placeholder content
-- [x] Created SEO files:
-  - public/robots.txt (with AI bot rules)
-  - public/llms.txt (AEO manifest)
-  - public/favicon.svg
+#### Layout Components (PRODUCTION READY)
+- [x] Site Header with full navigation
+  - Desktop mega menu with dropdowns
+  - Mobile sheet navigation
+  - Top contact bar
+  - Virtgate external link
+  - Logo integration (public/omf-logo.svg)
+- [x] Site Footer with all sections
+  - Company info + social links
+  - Navigation columns (Company, Services, Advisors)
+  - Office locations (Toronto, Mississauga)
+  - Contact info
+  - Copyright + legal links
 
-### Folder Structure Created
-```
-public/
-├── images/
-│   ├── logos/
-│   │   └── partners/    # Place 30+ partner logos here
-│   ├── team/            # Place executive photos here
-│   ├── gallery/         # Place event photos here
-│   └── hero/            # Place hero images here
-├── robots.txt
-├── llms.txt
-└── favicon.svg
-```
+#### Homepage Sections
+- [x] Hero section with stats and feature cards
+- [x] Partners marquee (15 carriers, auto-scroll animation)
+- [x] Services grid (8 product categories)
+- [x] About preview section
+- [x] Dual CTA section (clients + advisors)
+
+#### Route Stubs Created (30+ pages)
+- About section: index, vision-mission, leadership, history, executive-team, news, gallery, disclaimer
+- Products: index, find-advisor, partners
+- Advisor Portal: index, calendar, training, blogs, toolbox, forum, compliance, university, calculators, incentives
+- Standalone: contact, seminars, acquisitions, advisor-benefits
+- Legal: privacy, terms
+
+#### Configuration
+- [x] src/config/routes.ts - Central route registry
+- [x] Updated CLAUDE.md with Magic UI and mobile-first approach
+
+### Magic UI Integration
+- [x] MCP Server installed for Claude
+- [x] Ready to use via Claude MCP tools
 
 ## In Progress
 
-- [x] Add more shadcn/ui components (sheet, dialog, form, etc.) - DONE
-- [x] Push to GitHub - DONE (https://github.com/AgxntSix-AI/omf-website)
-- [x] Create site configuration files - DONE
-- [x] Install Magic UI (MCP server for Claude) - DONE
-
-## Recently Completed (Session 2)
-
-### Phase 1 continued:
-- [x] Added shadcn/ui components: dialog, sheet, form, input, textarea, select, scroll-area, separator, label, badge, dropdown-menu, navigation-menu, tooltip, avatar
-- [x] Installed Magic UI CLI and configured Claude MCP server
-- [x] Created src/config/site.ts (metadata, offices, social links)
-- [x] Created src/config/navigation.ts (menu structure)
-- [x] Created src/config/seo.ts (default meta tags, OG defaults)
-- [x] Created src/lib/structured-data.ts (schema.org JSON-LD generators)
-- [x] Updated CLAUDE.md with Magic UI info and correct color palette
+None - waiting for user direction on next features
 
 ## Next Up
 
-Feature ID: F201 - Homepage route with meta tags
-Feature ID: F202 - Hero section (placeholder)
-Feature ID: F203 - About preview section
-Feature ID: F204 - Services grid
+Feature ID: F301 - About landing page content
+Feature ID: F401 - Products page with partner grid
+Feature ID: F701 - Advisor Portal dashboard layout
+Feature ID: F901 - Contact page with form + map
 
 ## Blockers
 
 Waiting for user to provide:
-- Navbar component design
-- Footer component design
-- Cards component design
-- Logo files (place in public/images/logos/)
+- Partner logos (place in public/images/logos/partners/)
 - Team photos (place in public/images/team/)
+- Content for About pages
+- Hero background images
 
 ## Notes
+
+### Logo
+- Located at: public/omf-logo.svg (4.6MB SVG)
+- Used in header and footer
 
 ### Brand Colors (from Canva logo)
 - Lotus (Burgundy): #7b3e43 → refined to #7a3a40 for better contrast
@@ -105,9 +82,14 @@ Waiting for user to provide:
 - Bun as package manager
 - React 19 + Vite 6
 - TanStack Router (file-based)
-- Tailwind CSS v4 + shadcn/ui
+- Tailwind CSS v4 + shadcn/ui + Magic UI
 - Vitest + Playwright for testing
 - Vercel for deployment
+
+### Development Approach
+- Mobile-first design (280px foldable phones minimum)
+- Safari iOS 2026 as primary target
+- Progressive enhancement for desktop
 
 ### Important Decisions
 - No authentication needed (all public)
@@ -119,6 +101,14 @@ Waiting for user to provide:
 ---
 
 ## Session History
+
+### Session 2 - 2026-01-01 (continued)
+- Built production site header with mega menu
+- Built production footer with full info
+- Created 5 homepage sections
+- Created 30+ route stubs
+- Installed Magic UI MCP server
+- All pushed to GitHub
 
 ### Session 1 - 2026-01-01
 - Project kickoff

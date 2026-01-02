@@ -123,6 +123,23 @@ Create placeholder directories and use fallback images:
 - Use `min-h-svh` not `min-h-screen`
 - Prevent zoom on input focus (16px min font)
 
+### Content Strategy
+
+When building pages:
+1. **Source Content**: Use WebFetch to scrape existing omfinancial.com pages for authentic content
+2. **Extract & Reformat**: Pull text from the existing site, then restructure for modern web
+3. **Mobile-First Copywriting**:
+   - Break long paragraphs into scannable chunks
+   - Use cards, grids, and visual hierarchy
+   - Avoid walls of text - use bullet points, icons, and whitespace
+   - Headlines should be punchy and benefit-driven
+4. **Visual Formatting**:
+   - Use BlurFade animations for section reveals
+   - Group related content in Cards
+   - Add icons (Lucide) to reinforce key points
+   - Stats/numbers get prominent visual treatment
+5. **Keep Brand Voice**: Maintain the professional, trustworthy tone from existing content
+
 ---
 
 ## Commands

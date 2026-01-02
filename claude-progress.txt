@@ -1,56 +1,63 @@
 # Claude Progress - OM Financial Website
 
 Last Updated: 2026-01-01
-Session: 3
+Session: 4
 
 ## Current Status
 
-Phase 3: Magic UI + About Section - IN PROGRESS
+Phase 3: About Section + Core Pages - COMPLETE
 
 ## Completed This Session
 
-### Session 3: Magic UI Integration + About Pages
+### Session 4: About Pages + Contact + Products
 
-#### Magic UI Components Added
-- [x] Created src/components/magic-ui/marquee.tsx - Smooth marquee animation
-- [x] Created src/components/magic-ui/blur-fade.tsx - Entrance animations with blur
-- [x] Installed framer-motion for animation support
-- [x] Added CSS keyframes for marquee animations
+#### About Section Pages Completed
+- [x] History & Strategy (/about/history) - Full page with:
+  - Journey timeline (Foundation, Growth, Excellence, Today)
+  - Stats section (50+ years, 6 provinces, 30+ partners, 2 offices)
+  - National presence with provinces served
+  - Strategic pillars section
+  - BlurFade animations throughout
+- [x] Executive Team (/about/executive-team) - Full page with:
+  - Executive leadership cards (Rahul, Vikram, Divya)
+  - Toronto office team (Eleanor, Niranjanadevi, Roshana, Anahit)
+  - Mississauga office team (Gaurav, Ramesh, Shruti, Aruna)
+  - Email and phone contact for each team member
+- [x] Disclaimer (/about/disclaimer) - Full page with:
+  - General disclaimer
+  - Financial products & services disclaimer
+  - Regulatory compliance section
+  - Website terms of use
 
-#### Homepage Enhancements
-- [x] Partners marquee - Now uses Magic UI Marquee component
-  - Two-row layout with reverse animation on second row
-  - Pause on hover functionality
-  - Smooth gradient masks on edges
-- [x] Hero section - Added BlurFade animations
-  - Staggered entrance animations for all content
-  - Feature cards animate in sequence
-- [x] Services grid - Added BlurFade with stagger
-  - Cards fade in sequentially for visual interest
-  - Section header also animated
-
-#### About Section Pages (WITH REAL CONTENT)
-- [x] About Hub (/about) - Complete landing page
-  - Hero with company description
-  - Core values section (A Company with Heart, Ethics Before Profits, 50+ Years)
-  - Company description with stats grid
-  - Quick links to sub-pages
-  - Office locations section
+#### Contact Page Completed
+- [x] Contact page (/contact) - Full page with:
+  - Quick contact options (Call, Email, Live Chat)
+  - GHL widget placeholder (ready for embed code)
+  - Office locations with map placeholders
+  - Staff directory link
+  - Social media links
   - CTA section
-- [x] Vision & Mission (/about/vision-mission) - Full content
-  - Vision statement from existing site
-  - Mission pillars (Education, Technology, Talent)
-  - Core values checklist
-- [x] Leadership (/about/leadership) - Full content
-  - Rahul Bhardwaj profile (Chief Leader)
-  - Team overview section
-  - Contact information for both offices
 
-#### Content Scraped from omfinancial.com
-- About Us page content
-- Vision & Mission statements
-- Leadership information
-- Office contact details
+#### Products & Partners Page Completed
+- [x] Products page (/products) - Full page with:
+  - Stats section (30+ carriers, 8 categories)
+  - 8 product category cards with product tags
+  - Find an Advisor CTA
+  - Premier Partners grid (Sun Life, Canada Life, Manulife, RBC)
+  - Major Partners grid (iA, Empire, Foresters, Ivari)
+  - Marquee carousel with all 16+ partners
+  - CTA section
+
+#### CLAUDE.md Updated
+- [x] Added Content Strategy section:
+  - Source content via WebFetch from omfinancial.com
+  - Extract & reformat for mobile-first web
+  - Mobile-first copywriting guidelines
+  - Visual formatting best practices
+  - Brand voice maintenance
+
+#### Bug Fix
+- [x] Fixed siteConfig.links -> siteConfig.social in contact.tsx
 
 ## In Progress
 
@@ -58,10 +65,13 @@ None - waiting for user direction
 
 ## Next Up
 
-Feature ID: F304 - History & Strategy page
-Feature ID: F305 - Executive Team page
-Feature ID: F401 - Products page with partner grid
-Feature ID: F901 - Contact page with GHL widget + map
+Feature ID: F306 - News page
+Feature ID: F308 - Event Gallery page
+Feature ID: F402 - Find an Advisor page
+Feature ID: F403 - Partners detail page
+Feature ID: F501 - Acquisitions page
+Feature ID: F601 - Seminars page
+Feature ID: F801 - Advisor Benefits page
 
 ## Blockers
 
@@ -69,27 +79,46 @@ Waiting for:
 - Partner logos (currently using text placeholders)
 - Team photos (using avatar fallbacks)
 - GHL chatbot widget embed code
+- Google Maps API key for embedded maps
 - Additional team member information
 
 ## Notes
 
-### Magic UI Components Available
-- Marquee - For partner logos, testimonials
-- BlurFade - For entrance animations
-- More can be added as needed
+### Pages Completed (12 total)
+1. Homepage (/)
+2. About Hub (/about)
+3. Vision & Mission (/about/vision-mission)
+4. Leadership (/about/leadership)
+5. History & Strategy (/about/history)
+6. Executive Team (/about/executive-team)
+7. Disclaimer (/about/disclaimer)
+8. Contact (/contact)
+9. Products & Partners (/products)
++ Route stubs for remaining pages
+
+### Console Warnings (Non-blocking)
+- Nested anchor tag warning (in header/footer buttons)
+- ScrollRestoration deprecation warning
+- These don't affect functionality
 
 ### Content Source
 - Scraped from existing omfinancial.com WordPress site
-- Can fetch more pages as needed
-
-### Dev Server Issue
-- esbuild EPIPE error when running `bun run dev` in background
-- Works fine when run in foreground
-- May be system resource issue with multiple background processes
+- Executive team contacts extracted from contact page
+- Partner list extracted from products page
 
 ---
 
 ## Session History
+
+### Session 4 - 2026-01-01
+- Built History & Strategy page with timeline and strategic pillars
+- Built Executive Team page with full staff directory
+- Built Disclaimer page with legal content
+- Built Contact page with GHL placeholder and office info
+- Built Products & Partners page with category grid and partner marquee
+- Updated CLAUDE.md with content strategy guidelines
+- Fixed siteConfig reference bug
+- Tested all pages with Playwright MCP
 
 ### Session 3 - 2026-01-01
 - Added Magic UI components (Marquee, BlurFade)

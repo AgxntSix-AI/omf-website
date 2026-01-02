@@ -57,16 +57,17 @@ export const siteConfig = {
 
   // Social Links
   social: {
-    facebook: "https://facebook.com/omfinancialinc",
-    linkedin: "https://linkedin.com/company/om-financial",
-    instagram: "https://instagram.com/omfinancialinc",
-    twitter: "https://twitter.com/OmFinancial_Inc",
-    youtube: "https://youtube.com/channel/UCWWcSS6aA2ysdN35sdMKoag",
+    facebook: "https://www.facebook.com/omfinancialinc",
+    linkedin: "https://www.linkedin.com/in/om-financial/",
+    instagram: "https://www.instagram.com/omfinancialinc/",
+    twitter: "https://x.com/OmFinancial_Inc",
+    youtube: "https://www.youtube.com/channel/UCWWcSS6aA2ysdN35sdMKoag",
   },
 
   // External Links
   externalLinks: {
     virtgate: "https://virtgate.com",
+    googleMaps: "https://maps.app.goo.gl/UTDHAQYWj2sx1xxz8",
   },
 
   // Copyright

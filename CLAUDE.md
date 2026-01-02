@@ -259,11 +259,12 @@ bun run generate:sitemap # Generate sitemap.xml
 
 ## Social Links
 
-- Facebook: https://facebook.com/omfinancialinc
-- LinkedIn: https://linkedin.com/company/om-financial
-- Instagram: https://instagram.com/omfinancialinc
-- Twitter/X: https://twitter.com/OmFinancial_Inc
-- YouTube: https://youtube.com/channel/UCWWcSS6aA2ysdN35sdMKoag
+- Facebook: https://www.facebook.com/omfinancialinc
+- LinkedIn: https://www.linkedin.com/in/om-financial/
+- Instagram: https://www.instagram.com/omfinancialinc/
+- Twitter/X: https://x.com/OmFinancial_Inc
+- YouTube: https://www.youtube.com/channel/UCWWcSS6aA2ysdN35sdMKoag
+- Google Maps: https://maps.app.goo.gl/UTDHAQYWj2sx1xxz8
 
 ---
 

@@ -903,7 +903,7 @@
       "category": "testing",
       "name": "Unit tests - Utils",
       "description": "Test utility functions",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/unit/utils.test.ts"],
       "dependencies": ["F006"]
     },
@@ -912,7 +912,7 @@
       "category": "testing",
       "name": "Unit tests - Structured Data",
       "description": "Test schema generators",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/unit/structured-data.test.ts"],
       "dependencies": ["F006", "S005"]
     },
@@ -921,7 +921,7 @@
       "category": "testing",
       "name": "Unit tests - Navigation",
       "description": "Test navigation helpers",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/unit/navigation.test.ts"],
       "dependencies": ["F006"]
     },

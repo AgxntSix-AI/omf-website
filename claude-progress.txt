@@ -158,9 +158,15 @@ Phase 6C: Testing Suite - IN PROGRESS
 
 ## In Progress
 
-Testing Suite (T001-T010)
-- Unit tests: utils, structured-data, navigation
+Testing Suite (T001-T007) - E2E Tests remaining
 - E2E tests: navigation, SEO, mobile, accessibility
+
+## Completed This Session (continued)
+
+### Unit Tests (T008-T010) - 61 tests passing
+- [x] T008: Utils unit tests (10 tests) - cn() function
+- [x] T009: Structured data unit tests (24 tests) - all schema generators
+- [x] T010: Navigation unit tests (27 tests) - config validation
 
 ## Next Up
 
@@ -258,8 +264,12 @@ Waiting for:
 - Updated index.html with proper favicon/OG links
 - Updated package.json build script with sitemap
 - Updated routes.ts with all 29 pages marked done
+- Created vitest.config.ts and tests/setup.ts
+- Created unit tests: utils (10), structured-data (24), navigation (27)
+- All 61 unit tests passing
 - SEO Features Complete: S001-S013 (13 features)
 - Polish Features Complete: F951-F953 (3 features)
+- Unit Tests Complete: T008-T010 (3 features, 61 tests)
 
 ### Session 6 - 2026-01-01
 - Built News page with Strapi-ready interface

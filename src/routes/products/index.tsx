@@ -94,7 +94,6 @@ const partners = [
 
 const premierPartners = partners.filter(p => p.tier === "premier")
 const majorPartners = partners.filter(p => p.tier === "major")
-const otherPartners = partners.filter(p => p.tier === "partner")
 
 function PartnerCard({ name }: { name: string }) {
   return (

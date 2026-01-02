@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { Home, Search, Phone, ArrowLeft } from "lucide-react"
+import { Home, Phone, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { BlurFade } from "@/components/magic-ui/blur-fade"
 

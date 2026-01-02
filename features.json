@@ -840,7 +840,7 @@
       "category": "testing",
       "name": "Navigation E2E tests",
       "description": "Test all nav links, mobile menu, external links",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/navigation.spec.ts"],
       "dependencies": ["F007", "F107"]
     },
@@ -849,7 +849,7 @@
       "category": "testing",
       "name": "SEO E2E tests",
       "description": "Meta tags, OG tags, structured data validation",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/seo.spec.ts"],
       "dependencies": ["F007", "S004"]
     },
@@ -858,7 +858,7 @@
       "category": "testing",
       "name": "Performance tests",
       "description": "Core Web Vitals: LCP <2.5s, INP <200ms, CLS <0.1",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/performance.spec.ts"],
       "dependencies": ["F007"]
     },
@@ -867,7 +867,7 @@
       "category": "testing",
       "name": "Contact form tests",
       "description": "Form validation and submission",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/contact-form.spec.ts"],
       "dependencies": ["F007", "F902"]
     },
@@ -876,7 +876,7 @@
       "category": "testing",
       "name": "Mobile viewport tests",
       "description": "Test 320px, 375px, 768px viewports",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/mobile.spec.ts"],
       "dependencies": ["F007"]
     },
@@ -885,7 +885,7 @@
       "category": "testing",
       "name": "Foldable device tests",
       "description": "Galaxy Fold 280px, 653px",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/foldable.spec.ts"],
       "dependencies": ["F007"]
     },
@@ -894,7 +894,7 @@
       "category": "testing",
       "name": "Accessibility tests",
       "description": "axe-core integration, WCAG 2.1 AA",
-      "status": "pending",
+      "status": "pass",
       "files": ["tests/e2e/a11y.spec.ts"],
       "dependencies": ["F007"]
     },

@@ -138,7 +138,7 @@
       "category": "foundation",
       "name": "Vercel configuration",
       "description": "Create vercel.json for deployment",
-      "status": "pending",
+      "status": "pass",
       "files": [
         "vercel.json"
       ],
@@ -151,7 +151,7 @@
       "category": "foundation",
       "name": "GitHub CI workflow",
       "description": "Create CI/CD workflow for testing and deployment",
-      "status": "pending",
+      "status": "pass",
       "files": [
         ".github/workflows/ci.yml"
       ],

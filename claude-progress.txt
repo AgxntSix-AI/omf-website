@@ -1,0 +1,54 @@
+# Claude Progress - OM Financial Website
+
+Last Updated: 2026-01-01
+Session: 1
+
+## Current Status
+
+Phase 0: GitHub Repository Setup - IN PROGRESS
+
+## Completed This Session
+
+- [x] Initialized git repository
+- [x] Created GitHub repo: https://github.com/AgxntSix-AI/omf-website
+- [x] Created .gitignore
+- [x] Created README.md
+- [x] Created CLAUDE.md (session protocol)
+- [x] Created claude-progress.txt (this file)
+
+## In Progress
+
+- [ ] Create docs/features.json (feature tracking)
+- [ ] Create init.sh (dev setup script)
+- [ ] Initialize Vite + React + TypeScript
+- [ ] Install dependencies
+- [ ] Setup Tailwind CSS v4
+- [ ] Initialize shadcn/ui
+
+## Next Up
+
+Feature ID: F001 - Project initialization with Vite
+Feature ID: F002 - Tailwind CSS v4 setup
+Feature ID: F003 - shadcn/ui initialization
+
+## Blockers
+
+None
+
+## Notes
+
+- User will provide: Navbar, Footer, Cards components (use placeholders)
+- Virtgate is external link only
+- GHL chatbot will handle contact (form is secondary)
+- Calculators page: external links only (no custom calculators)
+- Strapi CMS is FUTURE priority (not in initial build)
+
+---
+
+## Session History
+
+### Session 1 - 2026-01-01
+- Project kickoff
+- GitHub repo created
+- Foundational files created
+- Next: Complete Phase 1 (Foundation)

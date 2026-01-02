@@ -1,0 +1,956 @@
+{
+  "project": "OM Financial Website",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-01",
+  "repository": "https://github.com/AgxntSix-AI/omf-website",
+  "totalFeatures": 120,
+  "categories": {
+    "F0XX": "Foundation - Project setup, config, tooling",
+    "F1XX": "Layout - Layout components, navigation",
+    "F2XX": "Home - Homepage sections",
+    "F3XX": "About - About Us pages",
+    "F4XX": "Products - Products & Partners",
+    "F5XX": "Acquisitions - Acquisitions page",
+    "F6XX": "Seminars - Seminars page",
+    "F7XX": "Portal - Advisor Portal pages",
+    "F8XX": "Benefits - Advisor Benefits page",
+    "F9XX": "Contact - Contact page",
+    "SXXX": "SEO - SEO/AEO/GEO features",
+    "TXXX": "Testing - Testing requirements"
+  },
+  "features": [
+    {
+      "id": "F001",
+      "category": "foundation",
+      "name": "Project initialization",
+      "description": "Initialize Vite + React 19 + TypeScript project with Bun",
+      "status": "pending",
+      "files": ["package.json", "vite.config.ts", "tsconfig.json", "index.html"],
+      "dependencies": []
+    },
+    {
+      "id": "F002",
+      "category": "foundation",
+      "name": "Tailwind CSS v4 setup",
+      "description": "Install @tailwindcss/vite, create theme.css with OM Financial colors",
+      "status": "pending",
+      "files": ["src/styles/index.css", "src/styles/theme.css"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "F003",
+      "category": "foundation",
+      "name": "shadcn/ui initialization",
+      "description": "Initialize shadcn/ui with button, card, dialog, form, input, sheet components",
+      "status": "pending",
+      "files": ["components.json", "src/components/ui/*"],
+      "dependencies": ["F002"]
+    },
+    {
+      "id": "F004",
+      "category": "foundation",
+      "name": "TanStack Router setup",
+      "description": "Install and configure TanStack Router with file-based routing",
+      "status": "pending",
+      "files": ["src/routes/__root.tsx", "src/main.tsx", "vite.config.ts"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "F005",
+      "category": "foundation",
+      "name": "Site configuration",
+      "description": "Create site.ts, navigation.ts, seo.ts config files",
+      "status": "pending",
+      "files": ["src/config/site.ts", "src/config/navigation.ts", "src/config/seo.ts"],
+      "dependencies": ["F004"]
+    },
+    {
+      "id": "F006",
+      "category": "foundation",
+      "name": "Vitest setup",
+      "description": "Configure Vitest for unit testing",
+      "status": "pending",
+      "files": ["vitest.config.ts", "tests/setup.ts"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "F007",
+      "category": "foundation",
+      "name": "Playwright setup",
+      "description": "Configure Playwright for E2E testing",
+      "status": "pending",
+      "files": ["playwright.config.ts", "tests/e2e/"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "F008",
+      "category": "foundation",
+      "name": "ESLint + Prettier",
+      "description": "Setup code quality tools",
+      "status": "pending",
+      "files": ["eslint.config.js", ".prettierrc"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "F009",
+      "category": "foundation",
+      "name": "Vercel configuration",
+      "description": "Create vercel.json for deployment",
+      "status": "pending",
+      "files": ["vercel.json"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "F010",
+      "category": "foundation",
+      "name": "GitHub CI workflow",
+      "description": "Create CI/CD workflow for testing and deployment",
+      "status": "pending",
+      "files": [".github/workflows/ci.yml"],
+      "dependencies": ["F006", "F007", "F008"]
+    },
+    {
+      "id": "F101",
+      "category": "layout",
+      "name": "Asset folder structure",
+      "description": "Create public/images folders for logos, team, gallery, partners",
+      "status": "pending",
+      "files": ["public/images/logos/", "public/images/team/", "public/images/gallery/", "public/images/partners/"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "F102",
+      "category": "layout",
+      "name": "Site header placeholder",
+      "description": "Create placeholder navbar awaiting user design",
+      "status": "pending",
+      "files": ["src/components/layout/site-header.tsx"],
+      "dependencies": ["F005"],
+      "blockedBy": "USER_PROVIDED"
+    },
+    {
+      "id": "F103",
+      "category": "layout",
+      "name": "Site footer placeholder",
+      "description": "Create placeholder footer awaiting user design",
+      "status": "pending",
+      "files": ["src/components/layout/site-footer.tsx"],
+      "dependencies": ["F005"],
+      "blockedBy": "USER_PROVIDED"
+    },
+    {
+      "id": "F104",
+      "category": "layout",
+      "name": "Mobile navigation",
+      "description": "Sheet-based mobile nav with hamburger menu",
+      "status": "pending",
+      "files": ["src/components/layout/mobile-nav.tsx"],
+      "dependencies": ["F102", "F003"]
+    },
+    {
+      "id": "F105",
+      "category": "layout",
+      "name": "Breadcrumbs component",
+      "description": "Auto-generate breadcrumbs from route with schema",
+      "status": "pending",
+      "files": ["src/components/layout/breadcrumbs.tsx"],
+      "dependencies": ["F004"]
+    },
+    {
+      "id": "F106",
+      "category": "layout",
+      "name": "Scroll to top",
+      "description": "Scroll to top button component",
+      "status": "pending",
+      "files": ["src/components/layout/scroll-to-top.tsx"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "F107",
+      "category": "layout",
+      "name": "Root layout",
+      "description": "Create root layout with header, main, footer structure",
+      "status": "pending",
+      "files": ["src/routes/__root.tsx"],
+      "dependencies": ["F102", "F103"]
+    },
+    {
+      "id": "F108",
+      "category": "layout",
+      "name": "Loading skeleton",
+      "description": "Reusable loading skeleton component",
+      "status": "pending",
+      "files": ["src/components/shared/loading-skeleton.tsx"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "F201",
+      "category": "home",
+      "name": "Homepage route",
+      "description": "Create index route with meta tags and Organization schema",
+      "status": "pending",
+      "files": ["src/routes/index.tsx", "src/features/home/index.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F202",
+      "category": "home",
+      "name": "Hero section",
+      "description": "Full-width hero with headline, CTA buttons, placeholder image",
+      "status": "pending",
+      "files": ["src/features/home/components/hero.tsx"],
+      "dependencies": ["F201"]
+    },
+    {
+      "id": "F203",
+      "category": "home",
+      "name": "About preview section",
+      "description": "Brief company intro with Learn More link",
+      "status": "pending",
+      "files": ["src/features/home/components/about-preview.tsx"],
+      "dependencies": ["F201"]
+    },
+    {
+      "id": "F204",
+      "category": "home",
+      "name": "Services grid",
+      "description": "3-4 column grid of 8 service cards",
+      "status": "pending",
+      "files": ["src/features/home/components/services-grid.tsx"],
+      "dependencies": ["F201"],
+      "blockedBy": "USER_PROVIDED"
+    },
+    {
+      "id": "F205",
+      "category": "home",
+      "name": "Partners carousel",
+      "description": "Logo carousel of 30+ insurance partners",
+      "status": "pending",
+      "files": ["src/features/home/components/partners-carousel.tsx"],
+      "dependencies": ["F201"]
+    },
+    {
+      "id": "F206",
+      "category": "home",
+      "name": "CTA banner",
+      "description": "Join Our Team / Contact Us dual CTA",
+      "status": "pending",
+      "files": ["src/features/home/components/cta-banner.tsx"],
+      "dependencies": ["F201"]
+    },
+    {
+      "id": "F207",
+      "category": "home",
+      "name": "Homepage data",
+      "description": "Static content data for homepage sections",
+      "status": "pending",
+      "files": ["src/features/home/data/home-content.ts"],
+      "dependencies": ["F201"]
+    },
+    {
+      "id": "F301",
+      "category": "about",
+      "name": "About landing page",
+      "description": "About Us index with links to sub-pages",
+      "status": "pending",
+      "files": ["src/routes/about/index.tsx", "src/features/about/index.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F302",
+      "category": "about",
+      "name": "Vision & Mission page",
+      "description": "Company vision and mission statements",
+      "status": "pending",
+      "files": ["src/routes/about/vision-mission.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F303",
+      "category": "about",
+      "name": "Leadership page",
+      "description": "Leadership overview with team cards",
+      "status": "pending",
+      "files": ["src/routes/about/leadership.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F304",
+      "category": "about",
+      "name": "History & Strategy page",
+      "description": "Company history timeline component",
+      "status": "pending",
+      "files": ["src/routes/about/history.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F305",
+      "category": "about",
+      "name": "Executive Team page",
+      "description": "Full executive team with bios",
+      "status": "pending",
+      "files": ["src/routes/about/executive-team.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F306",
+      "category": "about",
+      "name": "Executive Team data",
+      "description": "Team member data with contact info",
+      "status": "pending",
+      "files": ["src/data/team.ts"],
+      "dependencies": ["F305"]
+    },
+    {
+      "id": "F307",
+      "category": "about",
+      "name": "News index page",
+      "description": "News listing with pagination (Strapi-ready)",
+      "status": "pending",
+      "files": ["src/routes/about/news/index.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F308",
+      "category": "about",
+      "name": "News detail page",
+      "description": "Individual news article with Article schema",
+      "status": "pending",
+      "files": ["src/routes/about/news/$slug.tsx"],
+      "dependencies": ["F307"]
+    },
+    {
+      "id": "F309",
+      "category": "about",
+      "name": "Event Gallery page",
+      "description": "Photo grid with lightbox dialog",
+      "status": "pending",
+      "files": ["src/routes/about/gallery.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F310",
+      "category": "about",
+      "name": "Disclaimer page",
+      "description": "Legal disclaimer content",
+      "status": "pending",
+      "files": ["src/routes/about/disclaimer.tsx"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F311",
+      "category": "about",
+      "name": "About section data",
+      "description": "Static content for about pages",
+      "status": "pending",
+      "files": ["src/features/about/data/about-content.ts"],
+      "dependencies": ["F301"]
+    },
+    {
+      "id": "F312",
+      "category": "about",
+      "name": "Team card component",
+      "description": "Placeholder team card for user cards",
+      "status": "pending",
+      "files": ["src/components/cards/team-card.tsx"],
+      "dependencies": ["F003"],
+      "blockedBy": "USER_PROVIDED"
+    },
+    {
+      "id": "F401",
+      "category": "products",
+      "name": "Products landing page",
+      "description": "Products & Partners index",
+      "status": "pending",
+      "files": ["src/routes/products/index.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F402",
+      "category": "products",
+      "name": "Find an Advisor page",
+      "description": "Advisor search with form",
+      "status": "pending",
+      "files": ["src/routes/products/find-advisor.tsx"],
+      "dependencies": ["F401"]
+    },
+    {
+      "id": "F403",
+      "category": "products",
+      "name": "Partners list page",
+      "description": "30+ partners grid with logos",
+      "status": "pending",
+      "files": ["src/routes/products/partners/index.tsx"],
+      "dependencies": ["F401"]
+    },
+    {
+      "id": "F404",
+      "category": "products",
+      "name": "Partner detail page",
+      "description": "Individual partner information",
+      "status": "pending",
+      "files": ["src/routes/products/partners/$partnerId.tsx"],
+      "dependencies": ["F403"]
+    },
+    {
+      "id": "F405",
+      "category": "products",
+      "name": "Partners data",
+      "description": "30+ insurance partner data",
+      "status": "pending",
+      "files": ["src/data/partners.ts"],
+      "dependencies": ["F401"]
+    },
+    {
+      "id": "F406",
+      "category": "products",
+      "name": "Product categories data",
+      "description": "8 product categories from existing site",
+      "status": "pending",
+      "files": ["src/data/products.ts"],
+      "dependencies": ["F401"]
+    },
+    {
+      "id": "F407",
+      "category": "products",
+      "name": "Partner card component",
+      "description": "Partner logo card component",
+      "status": "pending",
+      "files": ["src/components/cards/partner-card.tsx"],
+      "dependencies": ["F003"],
+      "blockedBy": "USER_PROVIDED"
+    },
+    {
+      "id": "F408",
+      "category": "products",
+      "name": "Advisor search form",
+      "description": "Search form with validation",
+      "status": "pending",
+      "files": ["src/components/forms/advisor-search.tsx"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "F501",
+      "category": "acquisitions",
+      "name": "Acquisitions page",
+      "description": "Acquisitions & Succession Planning single page",
+      "status": "pending",
+      "files": ["src/routes/acquisitions.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F502",
+      "category": "acquisitions",
+      "name": "Acquisitions content",
+      "description": "Static content for acquisitions page",
+      "status": "pending",
+      "files": ["src/features/acquisitions/data/content.ts"],
+      "dependencies": ["F501"]
+    },
+    {
+      "id": "F601",
+      "category": "seminars",
+      "name": "Seminars page",
+      "description": "Seminars listing (Strapi-ready)",
+      "status": "pending",
+      "files": ["src/routes/seminars.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F602",
+      "category": "seminars",
+      "name": "Seminars placeholder data",
+      "description": "Placeholder seminar data",
+      "status": "pending",
+      "files": ["src/features/seminars/data/seminars.ts"],
+      "dependencies": ["F601"]
+    },
+    {
+      "id": "F701",
+      "category": "portal",
+      "name": "Portal landing page",
+      "description": "Advisor Portal index with all sub-links",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/index.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F702",
+      "category": "portal",
+      "name": "Virtgate link component",
+      "description": "External link card to Virtgate portal",
+      "status": "pending",
+      "files": ["src/features/advisor-portal/components/virtgate-card.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F703",
+      "category": "portal",
+      "name": "Event Calendar page",
+      "description": "Calendar view (Strapi-ready)",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/calendar.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F704",
+      "category": "portal",
+      "name": "Training Library page",
+      "description": "Training resources grid",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/training.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F705",
+      "category": "portal",
+      "name": "Blogs index page",
+      "description": "Blog listing (Strapi-ready)",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/blogs/index.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F706",
+      "category": "portal",
+      "name": "Blog detail page",
+      "description": "Individual blog post with Article schema",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/blogs/$slug.tsx"],
+      "dependencies": ["F705"]
+    },
+    {
+      "id": "F707",
+      "category": "portal",
+      "name": "Toolbox page",
+      "description": "Advisor tools and resources",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/toolbox.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F708",
+      "category": "portal",
+      "name": "Forum page",
+      "description": "Community forum placeholder",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/forum.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F709",
+      "category": "portal",
+      "name": "Compliance page",
+      "description": "Compliance resources",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/compliance.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F710",
+      "category": "portal",
+      "name": "OM Financial University page",
+      "description": "Learning platform landing",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/university.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F711",
+      "category": "portal",
+      "name": "Calculators page",
+      "description": "External links to calculator tools",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/calculators.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F712",
+      "category": "portal",
+      "name": "Incentives & Contests page",
+      "description": "Current promotions",
+      "status": "pending",
+      "files": ["src/routes/advisor-portal/incentives.tsx"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F713",
+      "category": "portal",
+      "name": "Portal navigation data",
+      "description": "Portal section navigation structure",
+      "status": "pending",
+      "files": ["src/features/advisor-portal/data/navigation.ts"],
+      "dependencies": ["F701"]
+    },
+    {
+      "id": "F714",
+      "category": "portal",
+      "name": "Portal section card",
+      "description": "Card component for portal sections",
+      "status": "pending",
+      "files": ["src/features/advisor-portal/components/portal-card.tsx"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "F715",
+      "category": "portal",
+      "name": "Resource card component",
+      "description": "Resource card for training/toolbox",
+      "status": "pending",
+      "files": ["src/components/cards/resource-card.tsx"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "F716",
+      "category": "portal",
+      "name": "Blog card component",
+      "description": "Blog post preview card",
+      "status": "pending",
+      "files": ["src/components/cards/blog-card.tsx"],
+      "dependencies": ["F003"],
+      "blockedBy": "USER_PROVIDED"
+    },
+    {
+      "id": "F801",
+      "category": "benefits",
+      "name": "Advisor Benefits page",
+      "description": "Benefits overview single page",
+      "status": "pending",
+      "files": ["src/routes/advisor-benefits.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F802",
+      "category": "benefits",
+      "name": "Benefits content",
+      "description": "Static content for benefits page",
+      "status": "pending",
+      "files": ["src/features/advisor-benefits/data/content.ts"],
+      "dependencies": ["F801"]
+    },
+    {
+      "id": "F901",
+      "category": "contact",
+      "name": "Contact page route",
+      "description": "Contact page with form and offices",
+      "status": "pending",
+      "files": ["src/routes/contact.tsx", "src/features/contact/index.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F902",
+      "category": "contact",
+      "name": "Contact form component",
+      "description": "Form with validation (GHL chatbot primary)",
+      "status": "pending",
+      "files": ["src/features/contact/components/contact-form.tsx"],
+      "dependencies": ["F901", "F003"]
+    },
+    {
+      "id": "F903",
+      "category": "contact",
+      "name": "GHL Chatbot placeholder",
+      "description": "Placeholder for GoHighLevel chatbot widget",
+      "status": "pending",
+      "files": ["src/components/shared/ghl-chatbot.tsx"],
+      "dependencies": ["F901"]
+    },
+    {
+      "id": "F904",
+      "category": "contact",
+      "name": "Office locations component",
+      "description": "Toronto + Mississauga office cards",
+      "status": "pending",
+      "files": ["src/features/contact/components/office-locations.tsx"],
+      "dependencies": ["F901"]
+    },
+    {
+      "id": "F905",
+      "category": "contact",
+      "name": "Office map component",
+      "description": "Embedded maps or static images",
+      "status": "pending",
+      "files": ["src/features/contact/components/office-map.tsx"],
+      "dependencies": ["F901"]
+    },
+    {
+      "id": "F906",
+      "category": "contact",
+      "name": "Staff directory component",
+      "description": "Staff listing grouped by office",
+      "status": "pending",
+      "files": ["src/features/contact/components/staff-directory.tsx"],
+      "dependencies": ["F901"]
+    },
+    {
+      "id": "F907",
+      "category": "contact",
+      "name": "Staff directory data",
+      "description": "Staff contact information",
+      "status": "pending",
+      "files": ["src/data/staff-directory.ts"],
+      "dependencies": ["F906"]
+    },
+    {
+      "id": "F908",
+      "category": "contact",
+      "name": "Office data",
+      "description": "Office locations with coordinates",
+      "status": "pending",
+      "files": ["src/data/offices.ts"],
+      "dependencies": ["F904"]
+    },
+    {
+      "id": "F909",
+      "category": "contact",
+      "name": "Social links component",
+      "description": "Social media icons/links",
+      "status": "pending",
+      "files": ["src/features/contact/components/social-links.tsx"],
+      "dependencies": ["F901"]
+    },
+    {
+      "id": "F910",
+      "category": "contact",
+      "name": "Social links data",
+      "description": "Social media URLs",
+      "status": "pending",
+      "files": ["src/config/social.ts"],
+      "dependencies": ["F909"]
+    },
+    {
+      "id": "S001",
+      "category": "seo",
+      "name": "robots.txt",
+      "description": "SEO + AI bot rules",
+      "status": "pending",
+      "files": ["public/robots.txt"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "S002",
+      "category": "seo",
+      "name": "llms.txt (AEO)",
+      "description": "AI crawler manifest for Answer Engine Optimization",
+      "status": "pending",
+      "files": ["public/llms.txt"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "S003",
+      "category": "seo",
+      "name": "Sitemap generator",
+      "description": "Auto-generate sitemap.xml on build",
+      "status": "pending",
+      "files": ["scripts/generate-sitemap.ts", "public/sitemap.xml"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "S004",
+      "category": "seo",
+      "name": "Meta tags component",
+      "description": "Reusable meta tags with OG + Twitter",
+      "status": "pending",
+      "files": ["src/components/seo/meta-tags.tsx"],
+      "dependencies": ["F004"]
+    },
+    {
+      "id": "S005",
+      "category": "seo",
+      "name": "Structured data library",
+      "description": "JSON-LD schema generators",
+      "status": "pending",
+      "files": ["src/lib/structured-data.ts"],
+      "dependencies": ["F005"]
+    },
+    {
+      "id": "S006",
+      "category": "seo",
+      "name": "Organization schema",
+      "description": "JSON-LD Organization structured data",
+      "status": "pending",
+      "files": ["src/lib/structured-data.ts"],
+      "dependencies": ["S005"]
+    },
+    {
+      "id": "S007",
+      "category": "seo",
+      "name": "LocalBusiness schema - Toronto",
+      "description": "JSON-LD for Toronto office",
+      "status": "pending",
+      "files": ["src/lib/structured-data.ts"],
+      "dependencies": ["S005"]
+    },
+    {
+      "id": "S008",
+      "category": "seo",
+      "name": "LocalBusiness schema - Mississauga",
+      "description": "JSON-LD for Mississauga office",
+      "status": "pending",
+      "files": ["src/lib/structured-data.ts"],
+      "dependencies": ["S005"]
+    },
+    {
+      "id": "S009",
+      "category": "seo",
+      "name": "FAQ schema",
+      "description": "FAQ structured data for common questions",
+      "status": "pending",
+      "files": ["src/lib/structured-data.ts"],
+      "dependencies": ["S005"]
+    },
+    {
+      "id": "S010",
+      "category": "seo",
+      "name": "Breadcrumbs schema",
+      "description": "BreadcrumbList structured data",
+      "status": "pending",
+      "files": ["src/components/layout/breadcrumbs.tsx"],
+      "dependencies": ["F105"]
+    },
+    {
+      "id": "S011",
+      "category": "seo",
+      "name": "Open Graph image",
+      "description": "Default OG image for social sharing",
+      "status": "pending",
+      "files": ["public/images/og-image.png"],
+      "dependencies": ["F101"]
+    },
+    {
+      "id": "S012",
+      "category": "seo",
+      "name": "Favicon set",
+      "description": "Favicon.ico and favicon.svg",
+      "status": "pending",
+      "files": ["public/favicon.ico", "public/favicon.svg"],
+      "dependencies": ["F001"]
+    },
+    {
+      "id": "S013",
+      "category": "seo",
+      "name": "Image optimization component",
+      "description": "Lazy loading, WebP/AVIF, fallback",
+      "status": "pending",
+      "files": ["src/components/shared/image-with-fallback.tsx"],
+      "dependencies": ["F003"]
+    },
+    {
+      "id": "T001",
+      "category": "testing",
+      "name": "Navigation E2E tests",
+      "description": "Test all nav links, mobile menu, external links",
+      "status": "pending",
+      "files": ["tests/e2e/navigation.spec.ts"],
+      "dependencies": ["F007", "F107"]
+    },
+    {
+      "id": "T002",
+      "category": "testing",
+      "name": "SEO E2E tests",
+      "description": "Meta tags, OG tags, structured data validation",
+      "status": "pending",
+      "files": ["tests/e2e/seo.spec.ts"],
+      "dependencies": ["F007", "S004"]
+    },
+    {
+      "id": "T003",
+      "category": "testing",
+      "name": "Performance tests",
+      "description": "Core Web Vitals: LCP <2.5s, INP <200ms, CLS <0.1",
+      "status": "pending",
+      "files": ["tests/e2e/performance.spec.ts"],
+      "dependencies": ["F007"]
+    },
+    {
+      "id": "T004",
+      "category": "testing",
+      "name": "Contact form tests",
+      "description": "Form validation and submission",
+      "status": "pending",
+      "files": ["tests/e2e/contact-form.spec.ts"],
+      "dependencies": ["F007", "F902"]
+    },
+    {
+      "id": "T005",
+      "category": "testing",
+      "name": "Mobile viewport tests",
+      "description": "Test 320px, 375px, 768px viewports",
+      "status": "pending",
+      "files": ["tests/e2e/mobile.spec.ts"],
+      "dependencies": ["F007"]
+    },
+    {
+      "id": "T006",
+      "category": "testing",
+      "name": "Foldable device tests",
+      "description": "Galaxy Fold 280px, 653px",
+      "status": "pending",
+      "files": ["tests/e2e/foldable.spec.ts"],
+      "dependencies": ["F007"]
+    },
+    {
+      "id": "T007",
+      "category": "testing",
+      "name": "Accessibility tests",
+      "description": "axe-core integration, WCAG 2.1 AA",
+      "status": "pending",
+      "files": ["tests/e2e/a11y.spec.ts"],
+      "dependencies": ["F007"]
+    },
+    {
+      "id": "T008",
+      "category": "testing",
+      "name": "Unit tests - Utils",
+      "description": "Test utility functions",
+      "status": "pending",
+      "files": ["tests/unit/utils.test.ts"],
+      "dependencies": ["F006"]
+    },
+    {
+      "id": "T009",
+      "category": "testing",
+      "name": "Unit tests - Structured Data",
+      "description": "Test schema generators",
+      "status": "pending",
+      "files": ["tests/unit/structured-data.test.ts"],
+      "dependencies": ["F006", "S005"]
+    },
+    {
+      "id": "T010",
+      "category": "testing",
+      "name": "Unit tests - Navigation",
+      "description": "Test navigation helpers",
+      "status": "pending",
+      "files": ["tests/unit/navigation.test.ts"],
+      "dependencies": ["F006"]
+    },
+    {
+      "id": "F951",
+      "category": "polish",
+      "name": "404 page",
+      "description": "Custom 404 error page",
+      "status": "pending",
+      "files": ["src/routes/404.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F952",
+      "category": "polish",
+      "name": "500 error page",
+      "description": "Server error page",
+      "status": "pending",
+      "files": ["src/routes/500.tsx"],
+      "dependencies": ["F107"]
+    },
+    {
+      "id": "F953",
+      "category": "polish",
+      "name": "Error boundary",
+      "description": "React error boundary component",
+      "status": "pending",
+      "files": ["src/components/shared/error-boundary.tsx"],
+      "dependencies": ["F004"]
+    }
+  ]
+}
